@@ -1,0 +1,86 @@
+/*Resets and overrides*/
+html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, span {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	}
+
+body {
+    max-width: 1020px;
+    margin: 0px auto;
+    color: #767e9e;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+header  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+	background: #2d303a;
+	overflow: hidden;
+	border-bottom: 5px solid #323746;
+}
+
+ul {
+	list-style-type: none;
+    }
+
+a {
+        text-decoration: none;
+    }
+
+/* .services ul {
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+.services ul li{
+    display: flex;
+    flex-direction: row;
+    width: 33%;
+    flex-wrap: wrap;
+} */
+
+	
+.services ul {
+	padding: 46px 0 0 0;
+	}
+
+.services ul li {
+	float: left;
+	padding: 0 20px 0 0;
+	max-width: 290px;
+	margin: 0 0 36px 0;
+	}
+
+.services ul li span {
+	float: left;
+	width: 56px;
+	height: 56px;
+	line-height: 56px;
+	text-align: center;
+	font-size: 35px;
+	font-family: 'linecons';
+	color: #666d89;
+	background: transparent;
+	-moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+	border-radius: 50%;
+	border: 2px solid #666d89;
+	margin: 0 10px 0 0;
+	}
+	
+.services ul li:hover span {
+	color: #f06c64;
+	border: 2px solid #f06c64;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	}
+
+
+
