@@ -27,22 +27,28 @@
     </header>
     <main>
         <div class="slider">
-            <div class="vertical iphone-case">
-                <div class="camera"></div>
-                <div class="speaker"></div>
-                <div class="screen"></div>
-                <div class="button"></div>
-                <span class="square-btn-image"></span>
+            <button class="btn" id="prev" type="button"><i class="fas fa-chevron-left"></i></button>
+            <button class="btn" id="next" type="button"><i class="fas fa-chevron-right"></i></button>
+            <div id="slick-carousele">
+                <div class="slider__wrapper">
+                    <div class="vertical iphone-case">
+                        <div class="camera"></div>
+                        <div class="speaker"></div>
+                        <div class="screen"></div>
+                        <div class="button"></div>
+                        <span class="square-btn-image"></span>
+                    </div>
+                    <div class="horisontal iphone-case">
+                        <div class="camera"></div>
+                        <div class="speaker"></div>
+                        <div class="screen"></div>
+                        <div class="button"></div>
+                        <span class="square-btn-image"></span>
+                    </div>
+                </div>
+                <div class="slider__wrapper">
+                </div>
             </div>
-
-            <div class="horisontal iphone-case">
-                <div class="camera"></div>
-                <div class="speaker"></div>
-                <div class="screen"></div>
-                <div class="button"></div>
-                <span class="square-btn-image"></span>
-            </div>
-
         </div>
 
         <section class="services">
@@ -87,7 +93,7 @@
                 <li>
                     <span class="quote icon"></span>
                     <div class="services__text-column">
-                        <h4>24 / 7 Support</h4>
+                        <h4>24 /7 Support</h4>
                         <p>Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen&shy;tesque egestas venenatis lorem.</p>
                     </div>
                 </li>
@@ -103,6 +109,18 @@
             </ul>
         </section>
     </main>
-    
+
+<!-- jQuery  -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Slick -->
+<script 
+  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js">
+</script>
+<script src="assets/JS/slick.js"></script>
+
+<!-- Font awesome -->
+<script src="https://kit.fontawesome.com/60ad54f41e.js" crossorigin="anonymous"></script>
+ 
 </body>
 </html>
