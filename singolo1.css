@@ -86,6 +86,9 @@ p {
 	font-weight: 400;
 	line-height: 1.7;
 	color: #767e9e;
+	-moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
 	}
 
 /*============= Header ==============*/
