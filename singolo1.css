@@ -12,15 +12,28 @@ html, html a {
 /*Font Face Linecons Lite*/
 @font-face {
 	font-family: 'LineIconsLite';
-	src:url('assets/linecons.eot');
-	src:url('assets/Fonts/linecons.eot?#iefix') format('embedded-opentype'),
-		url('assets/Fonts/linecons.ttf') format('truetype'),
-		url('assets/Fonts/linecons.woff') format('woff'),
-		url('assets/Fonts/linecons.svg#LineIconsLite') format('svg');
+	src:url('assets/Icons/linecons.eot');
+	src:url('assets/Icons/linecons.eot?#iefix') format('embedded-opentype'),
+		url('assets/Icons/linecons.ttf') format('truetype'),
+		url('assets/Icons/linecons.woff') format('woff'),
+		url('assets/Icons/svg-pack-lite.svg#LineIconsLite') format('svg');
 	font-weight: normal;
 	font-style: normal;
 	font-variant: normal;
 	speak: none;
+	}
+
+@font-face {
+	font-family: 'fontello';
+	src:url('assets/Fonts/fontello.eot?11696308');
+	src:url('assets/Fonts/fontello.eot?11696308#iefix') format('embedded-opentype'),
+		url('assets/Fonts/fontello.woff?11696308') format('woff'),
+		url('assets/Fonts/fontello.ttf?11696308') format('truetype'),
+		url('assets/Fonts/fontello.svg?11696308#fontello') format('svg');
+		font-weight: normal;
+		font-style: normal;
+		font-variant: normal;
+		speak: none;
 	}
 
 a, a:link, a:active, a:visited, a:hover {
@@ -41,8 +54,14 @@ body {
 	font-weight: 400;
 	}
 
+h1 {
+	font-size: 24.3px;
+	text-transform: uppercase;
+	color: #ffffff;
+}
+
 h2 {
-	font-size: 30px;
+	font-size: 30.5px;
 	font-weight: 900;
 	color: #666d89;
 	margin: 0 0 21px 0;
@@ -52,11 +71,11 @@ h3 {
 	font-size: 18px;
 	font-weight: 300;
 	color: #767e9e;
-	line-height: 1.6;
+	line-height: 1.7;
 	}
 
 h4 {
-	font-size: 18px;
+	font-size: 18.6px;
 	font-weight: 900;
 	color: #666d89;
 	margin: 0px 0px 9px 0px;
@@ -69,47 +88,110 @@ p {
 	color: #767e9e;
 	}
 
-
-
+/*============= Header ==============*/
 
 header  {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+	justify-content: space-between;
+	height: 90px;
 	background: #2d303a;
 	overflow: hidden;
-	border-bottom: 5px solid #323746;
+	border-bottom: 6px solid #323746;
+	align-items: center;
 }
 
-    
+.logo {
+	padding: 0px 0px 1px 40px;
+}
+
+.logo sup {
+    top: -4px;
+	right: 4px;
+	color: #f06c64;
+}
+
+ul.menu {
+	display: flex;
+	flex-direction: row;
+	margin: 8px 39px 0px 0px;
+	}
+
+ul.menu li {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	}
+
+ul.menu li+li:before{
+	font-family: 'fontello';
+	color: #494e62;
+	content: "\e804";
+}
+
+ul.menu li:first-child a {
+	margin-left: 0px;
+	}
+
+ul.menu li:last-child a {
+	margin-right: 0px;
+	}
+
+ul.menu li a {
+	color: #ffffff;
+	display: inline-block;
+	margin: 0 13.2px;
+	}
+
+ul.menu li:hover a {
+	color: #f06c64;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	}
+
+/*============= Slider ==============*/
+
+.slider {
+	position: relative;
+	height: 594px;
+    background: #f06c64;
+    overflow: hidden;
+	border-bottom: 6px solid #ea676b;
+	}
+
+
+
 /*============= Services ==============*/
 
 .services {
 	background: #f2f2f2;
 	overflow: hidden;
 	border-bottom: 6px solid #ffffff;
-	padding: 0px 0px 0px 40px;
+	padding: 61px 0px 0px 40px;
 	}
 
 .services h3{
-	padding: 0px 0px 0px 40px;
+	
 	}
 
 .services ul {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 49px 0 0 0;
+	padding: 44px 0 0 0;
 	}
 
 .services ul li{
     max-width: 320px;
-    padding: 0px 20px 35px 1px;
+    padding: 0px 20px 30px 1px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 .services ul li span {
+	margin: 2px 20px 0 0;
 	width: 55px;
 	height: 55px;
 	line-height: 55px;
@@ -123,7 +205,6 @@ header  {
     -khtml-border-radius: 50%;
 	border-radius: 50%;
 	border: 2px solid #666d89;
-	margin: 0 20px 0 0;
 	}
 
 .services ul li div {
@@ -137,9 +218,15 @@ header  {
 	-moz-transition-duration: 0.5s;
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
-    }
+	}
+	
+.services ul li p {
+	text-align: justify;
+	line-height: 1.8;
+	}
+	
     
-.heart:before {
+.heart::before {
 	content: "\e000";
     }
 
@@ -161,10 +248,6 @@ header  {
 
 .mobile:before {
     content: "\e017";
-	}
-
-.services ul li p {
-	text-align: justify;
 	}
 
 
