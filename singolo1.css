@@ -55,31 +55,34 @@ body {
 	}
 
 h1 {
-	font-size: 24.3px;
-	text-transform: uppercase;
+	font-size: 24.5px;
 	color: #ffffff;
+	text-transform: uppercase;
 }
 
 h2 {
-	font-size: 30.5px;
-	font-weight: 900;
-	color: #666d89;
-	margin: 0 0 21px 0;
+    margin: 0 0 21px 0;
+    font-size: 30.0px;
+    font-weight: 900;
+    letter-spacing: 0.4px;
+    color: #666d89;
 	}
 
 h3 {
+    padding-right: 31px;
 	font-size: 18px;
-	font-weight: 300;
-	color: #767e9e;
-	line-height: 1.7;
-	letter-spacing: -0.13px;
+    font-weight: 300;
+    line-height: 1.7;
+    letter-spacing: -0.06px;
+    color: #767e9e;
 	}
 
 h4 {
-	font-size: 18.6px;
-	font-weight: 900;
-	color: #666d89;
-	margin: 0px 0px 9px 0px;
+	margin: 0px 0px 10px 0px;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 0.3px;
+    color: #666d89;
 	}
 	
 p {
@@ -94,25 +97,25 @@ p {
 
 .btn {
 	display: inline-block;
+	padding: .375rem .75rem;
+	font-size: 31px;
+	line-height: 1.5;
 	font-weight: 400;
-	color: #ca4549;
 	text-align: center;
 	vertical-align: middle;
+	color: #ca4549;
 	cursor: pointer;
+	background-color: transparent;
+	border: 1px solid transparent;
+	border-radius: .25rem;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	background-color: transparent;
-	border: 1px solid transparent;
-	padding: .375rem .75rem;
-	font-size: 31px;
-	line-height: 1.5;
-	border-radius: .25rem;
-	transition: color .15s ease-in-out,
 	background-color .15s ease-in-out,
 	border-color .15s ease-in-out,
 	box-shadow .15s ease-in-out;
+	transition: color .15s ease-in-out,
 }
 
 .btn:active {
@@ -126,11 +129,11 @@ header  {
     display: flex;
     flex-direction: row;
 	justify-content: space-between;
-	height: 90px;
-	background: #2d303a;
-	overflow: hidden;
-	border-bottom: 6px solid #323746;
 	align-items: center;
+	height: 90px;
+	overflow: hidden;
+	background: #2d303a;
+	border-bottom: 6px solid #323746;
 }
 
 .logo {
@@ -170,9 +173,9 @@ ul.menu li:last-child a {
 	}
 
 ul.menu li a {
-	color: #ffffff;
 	display: inline-block;
 	margin: 0 13.2px;
+	color: #ffffff;
 	}
 
 ul.menu li:hover a {
@@ -188,8 +191,8 @@ ul.menu li:hover a {
 .slider {
 	position: relative;
 	height: 594px;
-    background: #f06c64;
     overflow: hidden;
+    background: #f06c64;
 	border-bottom: 6px solid #ea676b;
 	}
 .btn#next {
@@ -209,11 +212,11 @@ ul.menu li:hover a {
 .vertical.iphone-case {
 	position: absolute;
 	top: 52px;
-	left: 112px;
-	height: 458px;
-	width: 215px;
-	border-radius: 27px;
+    left: 112px;
+    width: 215px;
+    height: 458px;
 	background-color: #f2f2f2;
+	border-radius: 27px;
 	box-shadow: 25px 25px #ce5d56, 20px 20px #ce5d56, 15px 15px #ce5d56, 10px 10px #ce5d56, 5px 5px #ce5d56;
 }
 
@@ -221,55 +224,55 @@ ul.menu li:hover a {
     position: absolute;
     top: 17px;
     left: 103px;
-    height: 4px;
     width: 4px;
-    border-radius: 50%;
-    border: solid 2px #d8d8d8;
+    height: 4px;
     background-color: #f06c64;
+    border: solid 2px #d8d8d8;
+    border-radius: 50%;
 }
 
 .vertical .speaker {
 	position: absolute;
     top: 36px;
     left: 91px;
-    height: 5px;
     width: 35px;
-    border-radius: 3px;
+    height: 5px;
     background-color: #acacac;
+    border-radius: 3px;
 }
 
 .vertical .screen {
     position: absolute;
     top: 62px;
     left: 11px;
-    height: 333px;
     width: 188px;
-    border-radius: 3px;
-	border: solid 3px #c6c6c6;
+    height: 333px;
+    background-color: #dadc79;
 	background-image: url("assets/Images/Yellow-i-layer.png");
 	background-position: center;
-    background-color: #dadc79;
+	border: solid 3px #c6c6c6;
+    border-radius: 3px;
 }
 
 .vertical .button {
     position: absolute;
     top: 408px;
     left: 87px;
-    height: 41px;
     width: 41px;
-    border-radius: 50%;
+    height: 41px;
     background-color: #fafafa;
+    border-radius: 50%;
 }
 
 .vertical .square-btn-image {
     position: absolute;
     top: 420px;
     left: 99px;
-    height: 13px;
     width: 13px;
+    height: 13px;
+    background-color: #fafafa;
     border: solid 2px #bababa;
     border-radius: 4px;
-    background-color: #fafafa;
 }
 
 /*============= Horisontal iphone ==============*/
@@ -278,10 +281,10 @@ ul.menu li:hover a {
 	position: absolute;
     top: 173px;
     left: 425px;
-    height: 215px;
     width: 458px;
-    border-radius: 27px;
+    height: 215px;
 	background-color: #f2f2f2;
+    border-radius: 27px;
 	box-shadow: 25px 25px #ce5d56, 20px 20px #ce5d56, 15px 15px #ce5d56, 10px 10px #ce5d56, 5px 5px #ce5d56;
 }
 
@@ -289,42 +292,42 @@ ul.menu li:hover a {
     position: absolute;
     top: 103px;
     left: 433px;
-    height: 4px;
     width: 4px;
-    border-radius: 50%;
-	border: solid 2px #d8d8d8;
+    height: 4px;
     background-color: #f06c64;
+	border: solid 2px #d8d8d8;
+    border-radius: 50%;
 }
 
 .horisontal .speaker {
 	position: absolute;
 	top: 90px;
 	left: 417px;
-	height: 35px;
 	width: 5px;
-	border-radius: 3px;
+	height: 35px;
 	background-color: #acacac;
+	border-radius: 3px;
 }
 
 .horisontal .screen {
 	position: absolute;
 	top: 11px;
 	left: 57px;
-	height: 188px;
 	width: 333px;
-	border-radius: 3px;
-	border: solid 3px #c6c6c6;
+	height: 188px;
+	background-color: #82cfd9;
 	background-image: url("assets/Images/Blue-i-layer.png");
 	background-position: center;
-	background-color: #82cfd9;
+	border: solid 3px #c6c6c6;
+	border-radius: 3px;
 }
 
 .horisontal .button {
     position: absolute;
     top: 87px;
     left: 8px;
-    height: 41px;
     width: 41px;
+    height: 41px;
     border-radius: 50%;
     background-color: #fafafa;
 }
@@ -333,55 +336,58 @@ ul.menu li:hover a {
     position: absolute;
     top: 99px;
     left: 21px;
-    height: 13px;
     width: 13px;
+    height: 13px;
+    background-color: #fafafa;
     border: solid 2px #bababa;
     border-radius: 4px;
-    background-color: #fafafa;
 }
 
 /*============= Services ==============*/
 
 .services {
-	background: #f2f2f2;
 	overflow: hidden;
-	border-bottom: 6px solid #ffffff;
 	padding: 61px 0px 0px 40px;
+	background: #f2f2f2;
+	border-bottom: 6px solid #ffffff;
 	}
-
-.services h3{
-	
+.services>p {
+	width: 950px;
+    font-weight: 300;
+    font-size: 18px;
+    /* letter-spacing: 0.8px; */
+    line-height: 30px;
+    color: #767e9e;
 	}
-
 .services ul {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 44px 0 0 0;
 	}
 
-.services ul li{
-    max-width: 320px;
-    padding: 0px 20px 31px 1px;
+.services ul li{         /* icons */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    max-width: 320px;
+    padding: 0px 20px 31px 1px;
 }
 
 .services ul li span {
-	margin: 3px 20px 0px 0px;
 	width: 55px;
 	height: 55px;
-	line-height: 55px;
-	text-align: center;
+	margin: 3px 20px 0px 0px;
 	font-size: 32px;
 	font-family: 'LineIconsLite';
+	line-height: 55px;
+	text-align: center;
 	color: #666d89;
 	background: transparent;
+	border: 2px solid #666d89;
 	-moz-border-radius: 50%;
     -webkit-border-radius: 50%;
     -khtml-border-radius: 50%;
 	border-radius: 50%;
-	border: 2px solid #666d89;
 	}
 
 .services ul li div {
