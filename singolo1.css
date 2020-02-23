@@ -74,11 +74,12 @@ h3 {
     font-weight: 300;
     line-height: 1.7;
     letter-spacing: -0.06px;
-    color: #767e9e;
+	text-align : justify;
+	color: #767e9e;
 	}
 
 h4 {
-	margin: 0px 0px 10px 0px;
+	margin: 1px 0px 10px 0px;
     font-size: 18px;
     font-weight: 900;
     letter-spacing: 0.3px;
@@ -352,12 +353,13 @@ ul.menu li:hover a {
 	border-bottom: 6px solid #ffffff;
 	}
 .services>p {
-	width: 950px;
+	max-width: 940px;
     font-weight: 300;
     font-size: 18px;
-    /* letter-spacing: 0.8px; */
-    line-height: 30px;
-    color: #767e9e;
+    letter-spacing: -0.22px;
+	line-height: 30px;
+	text-align : justify;
+	color: #767e9e;
 	}
 .services ul {
 	display: flex;
@@ -370,7 +372,7 @@ ul.menu li:hover a {
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 320px;
-    padding: 0px 20px 31px 1px;
+    padding: 0px 20px 29px 1px;
 }
 
 .services ul li span {
