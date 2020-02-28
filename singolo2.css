@@ -39,7 +39,7 @@ html, html a {
 /*Font Face Fontello for social icons*/
 @font-face {
 	font-family: 'Social-icons';
-	src:url('assets/Fonts/fontello.svg?11696308#fontello') format('svg');
+	src:url('assets/Icons/round-social-icons.svg') format('svg');
 	}
 
 /*Font Lato*/ 
@@ -479,7 +479,7 @@ ul.menu li:hover a {
 }
 
 .portfolio_menu {
-    display: flex;
+	display: flex;
     margin: 11px 0px 19px 1px;
 }
 
@@ -500,7 +500,7 @@ ul.menu li:hover a {
 }
 
 .portfolio_menu li:nth-child(2) a {
-    padding: 0px 5px 0px 7px;
+    padding: 0px 5.5px 0px 6.5px;
 }
 
 .portfolio_menu li:nth-child(3) a {
@@ -559,9 +559,15 @@ img {
 /* ============= About us ============= */
 
 .about {
-    padding: 61.5px 40px 53px;
+	padding: 61.5px 40px 53px;
+	margin-bottom: 6px;
 	color: #666d89;
 	background-color: #f2f2f2;
+}
+
+.about h4 {
+	margin: 0px 0px 10px -1px;
+	letter-spacing: -0.1px;
 }
 
 .about ul {
@@ -573,21 +579,68 @@ img {
 
 .about ul li{
 	display: flex;
-	flex-direction: column;
+	flex-direction: row; 
 	flex-wrap: wrap;
 	max-width: 300px;
-    /* padding: 0px 0px 0px 1px; */
-}
-
-.about ul li:nth-child(2) {
-    margin-right: 1px;
+	align-items: center;
 }
 
 .about ul li img {
-    margin: 0 0 17px 0;
+	margin: 0 0px 17px 0;
 }
 
-.about h4 {
-	margin: 1px 0px 10px -1px;
-    letter-spacing: -0.1px;
+.about ul li:nth-child(1) img {
+	margin-left: -1px;
 }
+
+.about ul li:nth-child(2) img {
+	margin-left: -1.5px;
+}
+
+/* .about ul li+li {
+    margin-left: 20px;
+} */
+
+.about span {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 23px 8px 14px 0px;
+	font-family: "fontello";
+	font-size: 16px;
+	line-height: 31px;
+	text-align: center;
+	border: 1px solid #666d89;
+	color: #666d89;
+	-moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -khtml-border-radius: 50%;
+	border-radius: 50%;
+  }
+
+.about ul li:first-child {
+    margin-left: 1px;
+}
+
+.icon-twitter:before { 
+	content: '\e802';
+}
+.icon-facebook:before {
+	content: '\e800'; 
+}
+.icon-gplus:before { 
+	content: '\e801'; 
+}
+.icon-linkedin:before { 
+	content: '\e803'; 
+}
+
+.about ul li span:hover {
+	border: 1px solid #f06c64;
+	color: #f06c64;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	}
+  
