@@ -11,13 +11,13 @@ html, html a {
 
 /*Font Face Fontello for icons*/
 @font-face {
-	font-family: 'fontello';
-	src:url('assets/Icons/fontello.eot');
-	src:url('assets/Icons/fontello.eot') format('embedded-opentype'),
-		url('assets/Icons/fontello.woff') format('woff'),
-		url('assets/Icons/fontello.woff2') format('woff2'),
-		url('assets/Icons/fontello.ttf') format('truetype'),
-		url('assets/Icons/fontello.svg') format('svg');
+	font-family: "fontello";
+	src:url("assets/Icons/fontello.eot");
+	src:url("assets/Icons/fontello.eot") format("embedded-opentype"),
+		url("assets/Icons/fontello.woff") format("woff"),
+		url("assets/Icons/fontello.woff2") format("woff2"),
+		url("assets/Icons/fontello.ttf") format("truetype"),
+		url("assets/Icons/fontello.svg") format("svg");
 		font-weight: normal;
 		font-style: normal;
 		font-variant: normal;
@@ -26,25 +26,25 @@ html, html a {
 	
 /*Font Face Fontello for social icons*/
 /* @font-face {
-	font-family: 'Social-icons';
-	src:url('assets/Icons/round-social-icons.svg') format('svg');
+	font-family: "Social-icons";
+	src:url("assets/Icons/round-social-icons.svg") format("svg");
 	} */
 
 /*Font Lato*/ 
 @font-face {
-    font-family: 'Lato-Bold';
+    font-family: "Lato-Bold";
     src: url("./assets/Fonts/Lato-Bold.ttf");
 }
 @font-face {
-    font-family: 'Lato-Black';
+    font-family: "Lato-Black";
     src: url("./assets/Fonts/Lato-Black.ttf");
 }
 @font-face {
-    font-family: 'Lato-Light';
+    font-family: "Lato-Light";
     src: url("./assets/Fonts/Lato-Light.ttf");
 }
 @font-face {
-    font-family: 'Lato-Regular';
+    font-family: "Lato-Regular";
     src: url("./assets/Fonts/Lato-Regular.ttf");
 }
 
@@ -52,7 +52,7 @@ body {
     max-width: 1020px;
     margin: 0px auto;
     color: #767e9e;
-    font-family: 'Lato-Regular','Lato', sans-serif;
+    font-family: "Lato-Regular","Lato", sans-serif;
     font-size: 18px;
     font-weight: 400;
     }
@@ -75,7 +75,7 @@ h1 {
 
 h2 {
     margin: 7px 0 27px 0;
-    font-family: 'Lato-Black', 'Lato', sans-serif;
+    font-family: "Lato-Black", "Lato", sans-serif;
     font-size: 30.0px;
     letter-spacing: -0.15px;
     line-height: 17.86px;
@@ -84,7 +84,7 @@ h2 {
 
 h3 {
     max-width: 940px;
-    font-family: 'Lato-Light', 'Lato', sans-serif;
+    font-family: "Lato-Light", "Lato", sans-serif;
     font-size: 18px;
     line-height: 30px;
     text-align: justify;
@@ -93,14 +93,14 @@ h3 {
 
 h4 {
     margin: 0px 0px 10px 0px;
-    font-family: 'Lato-Black','Lato', sans-serif;
+    font-family: "Lato-Black","Lato", sans-serif;
     font-size: 18px;
     line-height: 17.86px;
     color: #666d89;
 	}
 	
 p {
-    font-family: 'Lato-Regular','Lato', sans-serif;
+    font-family: "Lato-Regular","Lato", sans-serif;
 	font-size: 12px;
 	font-weight: 400;
 	line-height: 21.6px;
@@ -148,7 +148,7 @@ header  {
 	align-items: center;
 	height: 90px;
     overflow: hidden;
-    font-family: 'Lato-Bold','Lato', sans-serif;
+    font-family: "Lato-Bold","Lato", sans-serif;
     line-height: 6.32px;
 	background: #2d303a;
 	border-bottom: 5px solid #323746;
@@ -179,7 +179,7 @@ ul.menu li {
 	}
 
 ul.menu li+li:before{
-	font-family: 'fontello';
+	font-family: "fontello";
 	color: #494e62;
 	content: "•";
 }
@@ -405,7 +405,7 @@ ul.menu li:hover a {
 	height: 55px;
 	margin: 3px 20px 0px 0px;
 	font-size: 32px;
-	font-family: 'fontello';
+	font-family: "fontello";
 	line-height: 56px;
 	text-align: center;
 	color: #666d89;
@@ -431,7 +431,7 @@ ul.menu li:hover a {
 	}
 	
 .services ul li p {
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
 }
 
 .pencil:before {
@@ -479,7 +479,7 @@ ul.menu li:hover a {
 .portfolio_menu li a {
 	display: block;
 	padding: 0px 6.5px 0px 6.5px;
-    font-family: 'Lato-Regular', sans-serif;
+    font-family: "Lato-Regular", sans-serif;
     font-size: 12px;
     font-weight: 300;
     line-height: 20px;
@@ -615,16 +615,16 @@ img {
   }
 
 .icon-facebook:before {
-	content: '\f001'; 
+	content: "\f001"; 
 }
 .icon-gplus:before { 
-	content: '\f002'; 
+	content: "\f002"; 
 }
 .icon-twitter:before { 
-	content: '\f003';
+	content: "\f003";
 }
 .icon-linkedin:before { 
-	content: '\f004'; 
+	content: "\f004"; 
 }
 
 .about ul li span:hover {
