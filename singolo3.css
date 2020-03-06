@@ -23,12 +23,6 @@ html, html a {
 		font-variant: normal;
 		speak: none;
 	}
-	
-/*Font Face Fontello for social icons*/
-/* @font-face {
-	font-family: 'Social-icons';
-	src:url('assets/Icons/round-social-icons.svg') format('svg');
-	} */
 
 /*Font Lato*/ 
 @font-face {
@@ -51,7 +45,6 @@ html, html a {
 body {
     max-width: 1020px;
     margin: 0px auto;
-    color: #767e9e;
     font-family: 'Lato-Regular','Lato', sans-serif;
     font-size: 18px;
     font-weight: 400;
@@ -79,7 +72,6 @@ h2 {
     font-size: 30.0px;
     letter-spacing: -0.15px;
     line-height: 17.86px;
-    color: #666d89;
 	}
 
 h3 {
@@ -88,7 +80,6 @@ h3 {
     font-size: 18px;
     line-height: 30px;
     text-align: justify;
-    color: #767e9e;
 	}
 
 h4 {
@@ -96,7 +87,6 @@ h4 {
     font-family: 'Lato-Black','Lato', sans-serif;
     font-size: 18px;
     line-height: 17.86px;
-    color: #666d89;
 	}
 	
 p {
@@ -105,11 +95,39 @@ p {
 	font-weight: 400;
 	line-height: 21.6px;
 	text-align: justify;
-	color: #767e9e;
 	-moz-hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
 	}
+
+span.social {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	font-family: "fontello";
+	font-size: 16px;
+	line-height: 31px;
+	text-align: center;
+	border: 1px solid #666d89;
+	color: #666d89;
+	-moz-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	border-radius: 50%;
+}
+
+.icon-facebook:before {
+	content: '\f001'; 
+}
+.icon-gplus:before { 
+	content: '\f002'; 
+}
+.icon-twitter:before { 
+	content: '\f003';
+}
+.icon-linkedin:before { 
+	content: '\f004'; 
+}
 
 .btn {
 	display: inline-block;
@@ -598,34 +616,7 @@ img {
 	margin-left: 1px;
 }
 
-.icons span {
-	display: inline-block;
-	width: 30px;
-	height: 30px;
-	font-family: "fontello";
-	font-size: 16px;
-	line-height: 31px;
-	text-align: center;
-	border: 1px solid #666d89;
-	color: #666d89;
-	-moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -khtml-border-radius: 50%;
-	border-radius: 50%;
-}
-
-.icon-facebook:before {
-	content: '\f001'; 
-}
-.icon-gplus:before { 
-	content: '\f002'; 
-}
-.icon-twitter:before { 
-	content: '\f003';
-}
-.icon-linkedin:before { 
-	content: '\f004'; 
-}
+/* Icons style are at the beginning after h's */
 
 .about ul li span:hover {
 	border: 1px solid #f06c64;
@@ -635,4 +626,21 @@ img {
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 }
-  
+
+
+/* ============= Contact form ============= */
+
+.contact {
+	padding: 61.5px 40px 67px;
+	color: #f0d8d9;
+	background-color: #f06c64;
+	border-bottom: 6px solid #ea676b;
+}
+
+h2 {
+    letter-spacing: -0.15px;
+	}
+
+h3 {
+
+	}
