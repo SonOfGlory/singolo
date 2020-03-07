@@ -61,7 +61,9 @@ ul {
 	
 
 h1 {
-    font-size: 25px;
+	font-size: 25px;
+	line-height: 6.32px;
+	letter-spacing: -0.5px;
 	color: #ffffff;
     
 }
@@ -149,7 +151,85 @@ span.social:hover {
 
 /*============= Social network icons" end ==============*/
 
-.btn {
+/*============= Header ==============*/
+
+header  {
+    display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 90px;
+    overflow: hidden;
+    font-family: "Lato-Bold","Lato", sans-serif;
+    line-height: 6.32px;
+	background: #2d303a;
+	border-bottom: 5px solid #323746;
+}
+
+.logo {
+    padding: 0px 0px 2px 40px;
+    text-transform: uppercase;
+}
+
+.logo sup {
+    font-size: 25px;
+    top: 0px;
+    right: 5px;
+    color: #f06c64;
+}
+
+ul.menu {
+	display: flex;
+	flex-direction: row;
+	margin: 10px 39px 0px 0px;
+}
+
+ul.menu li {
+	font-size: 12px;
+	/* font-weight: 700; */
+	text-transform: uppercase;
+}
+
+ul.menu li+li:before{
+	font-family: "fontello";
+	color: #494e62;
+	content: "•";
+}
+
+ul.menu li:first-child a {
+	margin-left: 0px;
+}
+
+ul.menu li:last-child a {
+	margin-right: 0px;
+}
+
+ul.menu li a {
+	display: inline-block;
+    margin: 0 12.4px;
+    letter-spacing: -0.05px;
+	color: #ffffff;
+}
+
+ul.menu li:hover a {
+	color: #f06c64;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+/*============= Slider ==============*/
+
+.slider {
+	position: relative;
+	height: 594px;
+    overflow: hidden;
+    background: #f06c64;
+	border-bottom: 6px solid #ea676b;
+}
+
+.slider_button {
 	display: inline-block;
 	padding: .375rem .75rem;
 	font-size: 31px;
@@ -172,95 +252,20 @@ span.social:hover {
 	transition: color .15s ease-in-out,
 }
 
-.btn:active {
+.slider_button:active {
 	color: #494e62;
 	border: none;
+	outline: none;
 }
 
-/*============= Header ==============*/
 
-header  {
-    display: flex;
-    flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	height: 90px;
-    overflow: hidden;
-    font-family: "Lato-Bold","Lato", sans-serif;
-    line-height: 6.32px;
-	background: #2d303a;
-	border-bottom: 5px solid #323746;
-}
-
-.logo {
-    padding: 0px 0px 1px 40px;
-    letter-spacing: -0.65px;
-    text-transform: uppercase;
-}
-
-.logo sup {
-    top: -4px;
-	right: 4px;
-	color: #f06c64;
-}
-
-ul.menu {
-	display: flex;
-	flex-direction: row;
-	margin: 10px 39px 0px 0px;
-	}
-
-ul.menu li {
-	font-size: 12px;
-	/* font-weight: 700; */
-	text-transform: uppercase;
-	}
-
-ul.menu li+li:before{
-	font-family: "fontello";
-	color: #494e62;
-	content: "•";
-}
-
-ul.menu li:first-child a {
-	margin-left: 0px;
-	}
-
-ul.menu li:last-child a {
-	margin-right: 0px;
-	}
-
-ul.menu li a {
-	display: inline-block;
-    margin: 0 12.4px;
-    letter-spacing: -0.05px;
-	color: #ffffff;
-	}
-
-ul.menu li:hover a {
-	color: #f06c64;
-	-o-transition-duration: 0.5s;
-	-moz-transition-duration: 0.5s;
-	-webkit-transition-duration: 0.5s;
-	transition-duration: 0.5s;
-	}
-
-/*============= Slider ==============*/
-
-.slider {
-	position: relative;
-	height: 594px;
-    overflow: hidden;
-    background: #f06c64;
-	border-bottom: 6px solid #ea676b;
-	}
-.btn#next {
+.slider_button#next {
     position: absolute;
     top: 264px;
     right: 24px;
 	}
 
-.btn#prev {
+.slider_button#prev {
 	position: absolute;
 	top: 264px;
 	left: 27px;
@@ -405,48 +410,52 @@ ul.menu li:hover a {
 /*============= Services ==============*/
 
 .services {
-    overflow: hidden;
-    padding: 61px 0px 31px 40px;
+	overflow: hidden;
+    padding: 61px 0px 32px 40px;
     color: #666d89;
     background: #f2f2f2;
     border-bottom: 5.55px solid #ffffff; /* in PSD 5.54px */
 }
 
-.services h4{
-	margin: 1px 0px 10px 0px;
-}
-
-.services>p {
-    max-width: 940px;
-    font-weight: 300;
-    font-size: 18px;
-    letter-spacing: -0.22px;
-	line-height: 30px;
-	color: #767e9e;
-}
-
 .services ul {
 	display: flex;
 	flex-wrap: wrap;
-	padding: 44px 0 0 0;
+	padding: 44px 0 0 1px;
+}
+
+.services h4{
+	margin: 1px 0px 10px 0px;
+    letter-spacing: -0.1px;
+}
+
+.services p {
+	margin-left: 1px;
 }
 
 .services ul li{         /* icons */
-    display: flex;
+	display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     max-width: 320px;
-    margin: 0px 18px 30px 1px;
+	margin: 0px 20px 29.5px 0px;
+}
+
+.services ul li:nth-child(3n+3) {        
+	margin-left: 1px;
+}
+
+.services ul li:nth-child(3n+3) h4 {        
+	margin-left: 2px;
 }
 
 .services ul li span {
 	width: 55px;
     height: 55px;
-    margin: 3px 21px 0px 0px;
+    margin: 3px 20px 0px 0px;
     font-size: 32px;
     font-family: "fontello";
     line-height: 56px;
-    text-align: center;
+ /*    text-align: center; */
 	color: #666d89;
 	background: transparent;
 	border: 2px solid #666d89;
@@ -469,34 +478,73 @@ ul.menu li:hover a {
 	transition-duration: 0.5s;
 }
 
-.pencil:before {
-	content: "\e001";
+.pencil {
+	position: relative;
 }
 
-.lamp:before {
-	content: "\e002";
+.pencil::before {
+    position: absolute;
+    right: 11px;
+    top: 0px;
+    content: "\e001";
+}
+
+.lamp {
+	position: relative;
+}
+
+.lamp::before {
+	position: absolute;
+    right: 16px;
+    bottom: 0px;
+    content: "\e002";
+}
+
+.heart {
+	position: relative;
 }
 
 .heart::before {
+	position: absolute;
+    right: 11px;
 	content: "\e003";
 }
 
+.mobile {
+	position: relative;
+}
+
 .mobile:before {
+	position: absolute;
+    right: 16px;
 	content: "\e004";
+}
+
+.quote {
+	position: relative;
 }
 	
 .quote:before {
+	position: absolute;
+    right: 11px;
 	content: "\e005";
+}
+
+.star {
+	position: relative;
 }
 		
 .star:before {
-	content: "\e006";	
+    position: absolute;
+    right: 11px;
+    bottom: 0px;
+    content: "\e006";
 }
 
 /* ============= Portfolio ============= */
 
 .portfolio {
-    padding: 60.5px 40px 47px;
+    padding: 61px 40px 47px;
 	color: #666d89;
 	background-color: #2d303a;
 	border-bottom: 6px solid #323746;
@@ -504,7 +552,7 @@ ul.menu li:hover a {
 
 .portfolio_menu {
 	display: flex;
-    margin: 11px 0px 19px 1px;
+    margin: 10.7px 0px 19px 1px;
 }
 
 .portfolio_menu li {
@@ -590,13 +638,9 @@ img {
 }
 
 .about h4 {
-	margin: 0px 0px 10px -1px;
-	letter-spacing: -0.1px;
+	margin: 0.5px 0px 9.5px -1px;
+    letter-spacing: -0.1px;
 }
-
-.about p {
-    letter-spacing: -0.07px;
-	}
 
 .about ul {
 	display: flex;
@@ -621,6 +665,11 @@ img {
 	margin-left: -1px;
 }
 
+.about ul li:first-child p{
+	word-spacing: -0.5px;
+    /* letter-spacing: -0.08px; */
+}
+
 .about ul li:first-child div{
 	margin-left: 1px;
 }
@@ -635,7 +684,7 @@ img {
 /* ============= Contact form ============= */
 
 .contact {
-	padding: 61.5px 40px 0px;
+	padding: 61.4px 40px 0px;
 	color: #f0d8d9;
 	background-color: #f06c64;
 	border-bottom: 6px solid #ea676b;
@@ -732,6 +781,7 @@ textarea {
 
 .form_button {
 	overflow: hidden;
+	margin: 0 0 15.6px 0;
     width: 110px;
     height: 38px;
     line-height: 38px;
@@ -786,5 +836,16 @@ footer {
 
 footer p {
 	letter-spacing: -0.17px;
+}
+
+footer p a {
+	color: #666d89;
+	letter-spacing: -0.2px;
+}
+
+footer p a:before{
+	font-family: "fontello";
+	color: #666d89;
+	content: "•";
 }
   
