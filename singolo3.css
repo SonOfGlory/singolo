@@ -127,6 +127,13 @@ span.social:hover {
 	transition-duration: 0.5s;
 }
 
+.icons {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 152px;
+}
+
 .icon-facebook:before {
 	content: "\f001"; 
 }
@@ -617,16 +624,12 @@ img {
 	margin-left: -1px;
 }
 
-.icons {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding-top: 23px;
-	width: 152px;
-}
-
 .about ul li:first-child div{
 	margin-left: 1px;
+}
+
+.about .icons {
+	padding-top: 23px;
 }
 
 /* Icons style are at the beginning after h"s */
@@ -668,11 +671,10 @@ img {
 	max-width:620px;
 	margin: 0px 21px 0px 0px;
 }
+
 .aside {
 	/* flex-basis: 39%; */
 }
-
-
 
 input {
 	margin: 0 0 16px 0;
@@ -711,39 +713,81 @@ textarea {
 	border-radius: 5px;
 }
 
+::placeholder {
+	color: #f48c8f;
+	opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+	color: #f48c8f;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+	color: #f48c8f;
+  }
+
 .contact span {
     display: block;
-    font-family: "Lato", sans-serif;
     font-size: 12px;
     font-weight: 400;
     line-height: 21.56px;
 }
-.aside:nth-child(4) {
+
+.form_button {
+	overflow: hidden;
+    width: 110px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 14px;
+    color: #f48c8f;
+    background: #d6564f;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+    text-transform: uppercase;
+}
+
+aside span:nth-child(2) {
 	margin: 0px 0px 0px 0px;
 }
 
-.contact span i {
-	font-family: "fontello";
-    font-size: 13px;
-    margin: 0 10px 0 0;
-    font-style: normal;
-/*     vertical-align: middle; */
-    text-align: center;
-}
-
 .icon_location:before {
-	margin: 3px;
+	margin: 0 13px 0 3px;
+	font-family: "fontello";
 	font-size: 14px;
 	content: "\E007"; 
 }
 .icon_phone:before { 
-	margin: 1px;
+	margin: 0 11px 0 0.8px;
+	font-family: "fontello";
 	font-size: 14px;
 	content: "\E008";
 }
 .icon_mail:before {
+	margin: 0 10px 0 0.3px;
+	font-family: "fontello";
 	font-size: 14px;
 	vertical-align: middle;
 	content: "\E009";
+}
+
+/* ============= Footer ============= */
+
+footer {
+	display: flex;
+    flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 76px;
+	padding: 0px 40px 0px 42px;
+    overflow: hidden;
+	font-family: "Lato-Bold","Lato", sans-serif;
+	color: #666d89;
+	background: #2d303a;
+}
+
+footer p {
+	letter-spacing: -0.17px;
 }
   
