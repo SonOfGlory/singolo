@@ -682,16 +682,20 @@ img {
 	margin-left: -1px;
 }
 
-.about ul li:first-child p{
+.about ul li:first-child p {
+	
+}
+
+.about ul li:first-child p {
 	word-spacing: 0px;
     /* letter-spacing: -0.08px; */
 }
 
-.about ul li:first-child p:first-line{
+.about ul li:first-child p:first-line {
 	word-spacing: -0.5px;
 }
 
-.about ul li:first-child div{
+.about ul li:first-child div {
 	margin-left: 1px;
 }
 
