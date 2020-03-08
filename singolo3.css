@@ -772,6 +772,10 @@ aside span:nth-child(2) {
 	content: "\E009";
 }
 
+aside a {
+	color: #f0d8d9;
+}
+
 /* ============= Footer ============= */
 
 footer {
