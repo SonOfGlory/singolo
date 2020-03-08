@@ -186,7 +186,6 @@ ul.menu {
 
 ul.menu li {
 	font-size: 12px;
-	/* font-weight: 700; */
 	text-transform: uppercase;
 }
 
@@ -209,7 +208,6 @@ ul.menu li a {
 	font-family: "Lato", sans-serif;
     font-weight: 500;
     margin: 0 12.45px;
-    /* letter-spacing: -0.05px; */
 	color: #ffffff;
 }
 
@@ -467,7 +465,6 @@ ul.menu li:hover a {
     font-size: 32px;
     font-family: "fontello";
     line-height: 56px;
- /*    text-align: center; */
 	color: #666d89;
 	background: transparent;
 	border: 2px solid #666d89;
