@@ -206,7 +206,7 @@ ul.menu li:last-child a {
 ul.menu li a {
 	display: inline-block;
 	font-family: "Lato", sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     margin: 0 12.45px;
 	color: #ffffff;
 }
@@ -251,6 +251,10 @@ ul.menu li:hover a {
 	box-shadow .15s ease-in-out;
 	outline: none;
 	transition: color .15s ease-in-out,
+}
+
+.slider_button:hover {
+	color: #494e62;
 }
 
 .slider_button:active {
@@ -435,7 +439,7 @@ ul.menu li:hover a {
 	overflow-x: hidden;
 	overflow-y: scroll;
 	-ms-overflow-style: none;  
-	overflow: -moz-scrollbars-none;
+	scrollbar-width: none;
 } 
 
 .services p::-webkit-scrollbar {
@@ -651,7 +655,7 @@ img {
 	letter-spacing: -0.1px;
 	overflow-x: scroll; /* Overflow sequence initiated */
 	-ms-overflow-style: none;  
-	overflow: -moz-scrollbars-none;
+	scrollbar-width: none;
 } 
 
 .about h4::-webkit-scrollbar {
