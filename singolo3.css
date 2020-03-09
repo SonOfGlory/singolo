@@ -172,6 +172,10 @@ span.social:hover {
 	transition: color .15s ease-in-out,
 }
 
+.btn:hover {
+	color: #494e62;
+}
+
 .btn:active {
 	color: #494e62;
 	border: none;
