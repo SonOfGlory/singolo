@@ -610,7 +610,7 @@ ul.menu li:hover a {
 .portfolio_images {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 	margin: 0 auto;
     max-width: 960px; /* for responcible changed from 940px */
 }
@@ -659,6 +659,16 @@ img {
 } 
 
 .about h4::-webkit-scrollbar {
+	display: none;
+}
+
+.about p {
+	overflow-x: scroll; /* Overflow sequence initiated */
+	-ms-overflow-style: none;  
+	scrollbar-width: none;
+}
+
+.about p::-webkit-scrollbar {
 	display: none;
 }
 
