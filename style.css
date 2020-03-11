@@ -656,6 +656,8 @@ img {
 	overflow-x: scroll; /* Overflow sequence initiated */
 	-ms-overflow-style: none;  
 	scrollbar-width: none;
+	white-space: nowrap;
+    text-overflow: ellipsis;
 } 
 
 .about h4::-webkit-scrollbar {
