@@ -1,13 +1,25 @@
 /*Resets and overrides*/
-html, body, div, h1, h2, h3, h4, h5, h6, p, ul, li, span {
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li,
+span {
 	margin: 0;
 	padding: 0;
 	line-height: 1;
-	}
+}
 
 html, html a {
 	-webkit-font-smoothing: antialiased;
-	}
+}
 
 /*Font Face Fontello for icons*/
 @font-face {
@@ -48,16 +60,16 @@ body {
     font-family: "Lato-Regular","Lato", sans-serif;
     font-size: 18px;
     font-weight: 400;
-    }
+}
 
 a, a:link, a:active, a:visited, a:hover {
 	text-decoration: none;
 	outline: none;
-	}
+}
 
 ul {
 	list-style-type: none;
-	}
+}
 	
 
 h1 {
@@ -74,7 +86,7 @@ h2 {
     font-size: 30.0px;
     letter-spacing: -0.15px;
     line-height: 17.86px;
-	}
+}
 
 h3 {
     max-width: 940px;
@@ -82,14 +94,14 @@ h3 {
     font-size: 18px;
     line-height: 30px;
     text-align: justify;
-	}
+}
 
 h4 {
     margin: 0px 0px 10px 0px;
     font-family: "Lato-Black","Lato", sans-serif;
     font-size: 18px;
     line-height: 17.86px;
-	}
+}
 	
 p {
     font-family: "Lato-Regular","Lato", sans-serif;
@@ -100,7 +112,7 @@ p {
 	-moz-hyphens: auto;
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
-	}
+}
 
 /*============= Social network icons" style ==============*/
 
@@ -139,17 +151,20 @@ span.social:hover {
 .icon-facebook:before {
 	content: "\f001"; 
 }
+
 .icon-gplus:before { 
 	content: "\f002"; 
 }
+
 .icon-twitter:before { 
 	content: "\f003";
 }
+
 .icon-linkedin:before { 
 	content: "\f004"; 
 }
 
-/*============= Social network icons" end ==============*/
+/*==== Social network icons" end ====*/
 
 /*============= Header ==============*/
 
@@ -164,6 +179,9 @@ header  {
     line-height: 6.32px;
 	background: #2d303a;
 	border-bottom: 5px solid #323746;
+	position: sticky;
+    top: 0;
+    z-index: 2;
 }
 
 .logo {
@@ -209,9 +227,18 @@ ul.menu li a {
     font-weight: 600;
     margin: 0 12.45px;
 	color: #ffffff;
+	transition: all 0.3s ease-in-out;
 }
 
 ul.menu li:hover a {
+	color: #f06c64;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
+
+ul.menu li a.menu-active {
 	color: #f06c64;
 	-o-transition-duration: 0.5s;
 	-moz-transition-duration: 0.5s;
@@ -227,6 +254,12 @@ ul.menu li:hover a {
     overflow: hidden;
     background: #f06c64;
 	border-bottom: 6px solid #ea676b;
+	transition: color 1.0s ease-in-out;
+}
+
+.slider.blue {
+	background-color: #648bf0;
+	border-bottom: 6px solid #348bf0;
 }
 
 .slider_button {
@@ -237,7 +270,7 @@ ul.menu li:hover a {
 	font-weight: 400;
 	text-align: center;
 	vertical-align: middle;
-	color: #ca4549;
+	color: #00000030;
 	cursor: pointer;
 	background-color: transparent;
 	border: 1px solid transparent;
@@ -250,11 +283,12 @@ ul.menu li:hover a {
 	border-color .15s ease-in-out,
 	box-shadow .15s ease-in-out;
 	outline: none;
-	transition: color .15s ease-in-out,
+	transition: color .15s ease-in-out;
+	z-index: 2;
 }
 
 .slider_button:hover {
-	color: #d6564f;
+	color: #00000020;
 }
 
 .slider_button:active {
@@ -275,9 +309,40 @@ ul.menu li:hover a {
 	left: 27px;
 }
 
-/*============= Vertical iphone ==============*/
+.carousele {
+	position: relative;
+	overflow: hidden;
+	height: 100%;
+}
 
-.vertical.iphone-case {
+.carousele.busy > .slide {
+	transition: all 1.0s ease-in-out;
+}
+
+.slide {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	/* transition: all 1.0s ease-in-out; */
+}
+
+.slide_one {
+	/* background: #f06c64; */
+}
+
+/*========== Sliding process ==========*/
+
+.slide[data-show=right] {
+    transform: translateX(100%);
+}
+.slide[data-show=left] {
+    transform: translateX(-100%);
+}
+
+/*============= Vertical iphone ==============*/
+/*    (will be also used for second slide)    */
+
+.iphone-case {
     position: absolute;
     top: 53px;
     left: 112px;
@@ -288,7 +353,7 @@ ul.menu li:hover a {
 	box-shadow: 25px 25px #ce5d56, 20px 20px #ce5d56, 15px 15px #ce5d56, 10px 10px #ce5d56, 5px 5px #ce5d56;
 }
 
-.vertical .camera {
+.camera {
     position: absolute;
     top: 17px;
     left: 103px;
@@ -299,7 +364,7 @@ ul.menu li:hover a {
     border-radius: 50%;
 }
 
-.vertical .speaker {
+.speaker {
 	position: absolute;
     top: 36px;
     left: 91px;
@@ -309,7 +374,7 @@ ul.menu li:hover a {
     border-radius: 3px;
 }
 
-.vertical .screen {
+.screen {
     position: absolute;
     top: 62px;
     left: 11px;
@@ -322,17 +387,26 @@ ul.menu li:hover a {
     border-radius: 3px;
 }
 
-.vertical .button {
+.iphone-case .button {
     position: absolute;
     top: 408px;
     left: 87px;
     width: 41px;
     height: 41px;
     background-color: #fafafa;
-    border-radius: 50%;
+	border-radius: 50%;
+	cursor: pointer;
 }
 
-.vertical .square-btn-image {
+.iphone-case .button:active {
+  	text-shadow: none;
+  	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+  	-webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+  	box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
+}
+
+
+.square-btn-image {
     position: absolute;
     top: 420px;
     left: 99px;
@@ -346,69 +420,55 @@ ul.menu li:hover a {
 /*============= Horisontal iphone ==============*/
 
 .horisontal.iphone-case {
-    position: absolute;
-    top: 174px;
-    left: 425px;
-    width: 458px;
-    height: 215px;
-    background-color: #f2f2f2;
-    border-radius: 27px;
-    box-shadow: 26px 25px #ce5d56, 22px 20px #ce5d56, 18px 16px #ce5d56, 13px 11px #ce5d56, 7px 6px #ce5d56;
-}
+	top: 52.5px;
+    left: 546.9px;
+	transform: rotate(90deg);
+	box-shadow: 25px -26px #ce5d56, 19px -20px #ce5d56, 14px -15px #ce5d56, 9px -9px #ce5d56, 5px -5px #ce5d56;
 
-.horisontal .camera {
-    position: absolute;
-    top: 103px;
-    left: 433px;
-    width: 4px;
-    height: 4px;
-    background-color: #f06c64;
-	border: solid 2px #d8d8d8;
-    border-radius: 50%;
-}
-
-.horisontal .speaker {
-	position: absolute;
-	top: 90px;
-	left: 417px;
-	width: 5px;
-	height: 35px;
-	background-color: #acacac;
-	border-radius: 3px;
 }
 
 .horisontal .screen {
-	position: absolute;
-	top: 11px;
-	left: 57px;
-	width: 333px;
-	height: 188px;
 	background-color: #82cfd9;
 	background-image: url("assets/Images/Blue-i-layer.png");
-	background-position: center;
-	border: solid 3px #c6c6c6;
-	border-radius: 3px;
 }
 
-.horisontal .button {
-    position: absolute;
-    top: 87px;
-    left: 8px;
-    width: 41px;
-    height: 41px;
-    border-radius: 50%;
-    background-color: #fafafa;
+.horisontal .speaker {
+	width: 36px;
+    left: 90px;
+}
+/*================== Slide Two =================*/
+
+.slide_two {
+	background-color: #648bf0;
+	z-index: 1;
+	/* border-bottom: 6px solid #348bf0; */
 }
 
-.horisontal .square-btn-image {
-    position: absolute;
-    top: 99px;
-    left: 21px;
-    width: 13px;
-    height: 13px;
-    background-color: #fafafa;
-    border: solid 2px #bababa;
-    border-radius: 4px;
+/* ======== Center phone ======== */
+
+.slide_two  .big.iphone-case {
+	left: 50%;
+    transform: translate(-50%) scale(calc(486.45/458)); /* figma big phone height / small phone height */
+	z-index: 1;
+	box-shadow: 25px 25px #5d81dF, 20px 20px #5d81dF, 15px 15px #5d81dF, 10px 10px #5d81dF, 5px 5px #5d81dF;
+	
+}
+
+/* ======== Small phone ======== */
+
+.slide_two  .small.iphone-case {
+	transform:  scale(calc(297.75/458));
+	opacity: 0.5;
+	box-shadow: 25px 25px #5d81dF, 20px 20px #5d81dF, 15px 15px #5d81dF, 10px 10px #5d81dF, 5px 5px #5d81dF;
+}
+
+.small.left.iphone-case {
+	left: 21.5%;
+}
+
+.small.right.iphone-case {
+	left: 57.5%;
+	z-index: 1;
 }
 
 /*============= Services ==============*/
@@ -572,7 +632,7 @@ ul.menu li:hover a {
 	margin-right: 10px;
 }
 
-.portfolio_menu li a {
+.portfolio_menu li button {
 	display: block;
 	padding: 0px 6.5px 0px 6.5px;
     font-family: "Lato-Regular", sans-serif;
@@ -581,24 +641,34 @@ ul.menu li:hover a {
     line-height: 20px;
     color: #767e9e;
     border: 1px solid #666d89;
-    border-radius: 5px;
+	border-radius: 5px;
+	background: none;
+	cursor: pointer;
+	outline: none;
 }
 
-.portfolio_menu li:nth-child(2) a {
+.portfolio_menu li:nth-child(2) button {
     padding: 0px 5.5px 0px 6.5px;
 }
 
-.portfolio_menu li:nth-child(3) a {
+.portfolio_menu li:nth-child(3) button {
     padding: 0px 5px 0px 6px;
 }
 
-.portfolio_menu li:nth-child(4) a {
+.portfolio_menu li:nth-child(4) button {
     padding: 0px 6px 0px 5px;
 }
 
+.portfolio_menu li:hover button {
+    color: #dedede;
+	border-color: #dedede;
+	-o-transition-duration: 0.5s;
+	-moz-transition-duration: 0.5s;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+}
 
-
-.portfolio_menu li:hover a {
+ul.portfolio_menu li button.portfolio-active {
     color: #dedede;
 	border-color: #dedede;
 	-o-transition-duration: 0.5s;
@@ -622,23 +692,106 @@ ul.menu li:hover a {
 .portfolio_images li {
 	margin-bottom: 17.6px;
 	margin-right: 20px; /* for responcible changed from 0px */
+	overflow: hidden;
+	box-sizing: border-box;
 }
 
 .portfolio_images li a {
     display: block;
-    height: 100%;
+	height: 100%;
+
 }
+
+/* .portfolio_images_clicked {
+	outline: dotted 5px #F06C64 ;
+} */
+
+/* ------- candyframe ------ */
+
+
+.portfolio_images_clicked {
+	width: 220px;
+  	height: 187px;
+	box-sizing: border-box;
+	padding: 5px;
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio_images_clicked::before {
+	content: '';
+	position: absolute;
+	width: 155%;
+	height: 155%;
+	background: repeating-linear-gradient(
+			white 0%,
+			white 7.5px,
+			#F06C64 7.5px,
+			#F06C64 15px,
+			white 15px,
+			white 22.5px,
+			#F06C64 22.5px,
+			#F06C64 30px);
+	transform: translateX(-19%) translateY(-20%) rotate(-45deg);
+	animation: animate 20s linear infinite;
+}
+
+.portfolio_images_clicked img {
+	display: block;
+	position: relative;
+	box-sizing: border-box;
+	background: white;
+}
+
+.portfolio_images_clicked,
+.portfolio_images_clicked img {
+	box-shadow: 0 0 2px deeppink,
+				0 0 5px rgba(0, 0, 0, 1),
+				inset 0 0 5px rgba(0, 0, 0, 1);
+	border-radius: 10px;
+}
+.portfolio_images_clicked img {
+	width: 210px!important;
+	height: 177px!important;
+}
+
+@keyframes animate {
+	from {
+		background-position: 0;
+	}
+
+	to {
+		background-position: 0 450px;
+	}
+}
+
+/* candyframe */
+
+
 
 img {
     border: none;
 }
 
-.portfolio_images img:hover {
+/* .portfolio_images img:hover {
 	transform: scale(1.1);
 	-o-transition-duration: 0.5s;
 	-moz-transition-duration: 0.5s;
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
+} */
+
+
+[data-filter='webdesign'] > li:not([data-type='webdesign']) {
+	display: none;
+}
+
+[data-filter='graphicdesign'] > li:not([data-type='graphicdesign']) {
+	display: none;
+}
+
+[data-filter='artwork'] > li:not([data-type='artwork']) {
+	display: none;
 }
 
 /* ============= About us ============= */

@@ -19,8 +19,8 @@
     <header>
         <div class="logo"><h1>Singolo <sup>*</sup> </h1></div>
         <ul class="menu right">
-            <li><a href="#">home</a></li>
-            <li><a href="#">services</a></li>
+            <li><a class="menu-active" href="#">home</a></li>
+            <li><a href="#services">services</a></li>
             <li><a href="#">portfolio</a></li>
             <li><a href="#">about</a></li>
             <li><a href="#">contact</a></li>
@@ -28,12 +28,12 @@
     </header>
 
     <main>
-        <div class="slider">
-            <button class="slider_button" id="prev" type="button"><i class="fas fa-chevron-left"></i></button>
-            <button class="slider_button" id="next" type="button"><i class="fas fa-chevron-right"></i></button>
-            <div id="slick-carousele">
-                <div class="slider__wrapper">
-                    <div class="vertical iphone-case">
+        <section class="slider">
+            <button class="slider_button" id="prev" data-arrow="left" type="button"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider_button" id="next" data-arrow="right" type="button"><i class="fas fa-chevron-right"></i></button>
+            <div class="carousele">
+                <div class="slide slide_one">  <!-- slider image one  -->
+                    <div class="iphone-case"> 
                         <div class="camera"></div>
                         <div class="speaker"></div>
                         <div class="screen"></div>
@@ -48,10 +48,31 @@
                         <span class="square-btn-image"></span>
                     </div>
                 </div>
-                <div class="slider__wrapper">
+                <div class="slide slide_two"> 
+                    <div class="big iphone-case">
+                        <div class="camera"></div>
+                        <div class="speaker"></div>
+                        <div class="screen"></div>
+                        <div class="button"></div>
+                        <span class="square-btn-image"></span>
+                    </div>
+                    <div class="left small iphone-case">
+                        <div class="camera"></div>
+                        <div class="speaker"></div>
+                        <div class="screen"></div>
+                        <div class="button"></div>
+                        <span class="square-btn-image"></span>
+                    </div>
+                    <div class="right small iphone-case">
+                        <div class="camera"></div>
+                        <div class="speaker"></div>
+                        <div class="screen"></div>
+                        <div class="button"></div>
+                        <span class="square-btn-image"></span>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
         <section class="services">
             <h2>Our Services</h2>
@@ -115,89 +136,52 @@
 
             <!-- Portfolio Menu -->
             <ul class="portfolio_menu">
-            	<li class="current all"><a href="#">All</a></li>
-                <li class="webdesign"><a href="#">Web Design</a></li>
-                <li class="graphicdesign"><a href="#">Graphic Design</a></li>
-                <li class="artwork"><a href="#">Artwork</a></li>
+            	<li><button id="all" class="portfolio-active">All</button></li>
+                <li><button id="webdesign">Web Design</button></li>
+                <li><button id="graphicdesign">Graphic Design</button></li>
+                <li><button id="artwork">Artwork</button></li>
             </ul><!-- .portfolio-menu -->
 
             <!-- Portfolio -->
-            <ul class="portfolio_images">
+            <ul class="portfolio_images" data-filter="">
             	<li data-id="id-1" data-type="webdesign">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img1.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img1.jpg" width="220" height="187" alt="#" />
+                </li>                
             	<li data-id="id-2" data-type="graphicdesign">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img2.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img2.jpg" width="220" height="187" alt="#" />
+                </li>               
             	<li data-id="id-3" data-type="webdesign">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img3.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img3.jpg" width="220" height="187" alt="#" />
+                </li>               
             	<li data-id="id-4" data-type="artwork">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img4.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img4.jpg" width="220" height="187" alt="#" />
+                </li>               
             	<li data-id="id-5" data-type="graphicdesign">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img5.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img5.jpg" width="220" height="187" alt="#" />
+                </li>               
             	<li data-id="id-6" data-type="artwork">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img6.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img6.jpg" width="220" height="187" alt="#" />
+                </li>                
             	<li data-id="id-7" data-type="webdesign">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img7.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img7.jpg" width="220" height="187" alt="#" />
+                </li>                
             	<li data-id="id-8" data-type="graphicdesign">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img8.jpg" width="220" height="187" alt="#" />
-                    </a>
+                    <img src="assets/Images/Thumbnails/img8.jpg" width="220" height="187" alt="#" />
                 </li>
-                
             	<li data-id="id-9" data-type="artwork">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img9.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img9.jpg" width="220" height="187" alt="#" />
+                </li>            
             	<li data-id="id-10" data-type="graphicdesign">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img10.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img10.jpg" width="220" height="187" alt="#" />
+                </li>               
             	<li data-id="id-11" data-type="webdesign">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img11.jpg" width="220" height="187" alt="#" />
-                    </a>
-                </li>
-                
+                    <img src="assets/Images/Thumbnails/img11.jpg" width="220" height="187" alt="#" />
+                </li>               
             	<li data-id="id-12" data-type="artwork">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img12.jpg" width="220" height="187" alt="#" />
-                    </a>
+                    <img src="assets/Images/Thumbnails/img12.jpg" width="220" height="187" alt="#" />
                 </li>
                 <li data-id="id-12" data-type="artwork">
-                    <a href="#">
-                        <img src="assets/Images/Thumbnails/img12.jpg" width="220" height="187" alt="#" />
-                    </a>
+                    <img src="assets/Images/Thumbnails/img12.jpg" width="220" height="187" alt="#" />
                 </li>
             </ul><!-- .portfolio -->
         </section>
@@ -302,10 +286,12 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <!-- Slick -->
-<script 
+<!-- <script 
   src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js">
 </script>
-<script src="assets/JS/slick.js"></script>
+<script src="assets/JS/slick.js"></script> -->
+
+<script src="script.js"></script>
 
 <!-- Font awesome -->
 <script src="https://kit.fontawesome.com/60ad54f41e.js" crossorigin="anonymous"></script>
