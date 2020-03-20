@@ -1,22 +1,32 @@
 /* ======= Header menu part ===== */
 
 document.addEventListener('scroll', onscroll);
+const headerMenu = document.querySelector("body > header > ul");
 
 function onscroll (e) {
   const scrollPosition = window.scrollY;
-  const allParts = document.querySelectorAll('body > header, body > main > section, body > footer');
-  console.log(scrollPosition);
+  const allParts = document.querySelectorAll('body > header, body > main > section, body > footer'); /* body > header,  */
+  // console.log(scrollPosition);
 
-  allParts.forEach((element) => {
-    console.log(element.getAttribute('id'));
+  allParts.forEach(element => {
+    // console.log(element.getAttribute('id'));
+    // console.log(element);
+    // debugger;
+    if ((scrollPosition + header.offsetHeight) > element.offsetTop && scrollPosition < (element.offsetTop + element.offsetHeight)) {
+      headerMenu.querySelectorAll('li > a').forEach(a => {
+        a.classList.remove('menu-active');
+        if ((element.getAttribute('id') === a.getAttribute('href').substring(1)) || (element.getAttribute('id') === a.getAttribute('data-home'))) {
+          a.classList.add('menu-active');
+        }
+      })
+    }
   });
 }
 
-const headerMenu = document.querySelector("body > header > ul");
-
-headerMenu.onclick = event => { headerMenu.querySelectorAll('li > a').forEach(element => element.classList.remove('menu-active'));
-    event.target.classList.add('menu-active');
-};
+// ----- Old way to make menu options active: ----
+// headerMenu.onclick = event => { headerMenu.querySelectorAll('li > a').forEach(element => element.classList.remove('menu-active'));
+//     event.target.classList.add('menu-active');
+// };
 
 /* ====== Slider menu part ==== */
 
@@ -52,7 +62,7 @@ function slideBtnHandler(e) {
 
 /* ====== Portfolio menu part ==== */
 
-const portfolioMenu = document.querySelector("body > main > section.portfolio > ul.portfolio_menu");
+const portfolioMenu = document.querySelector("body > main > section#portfolio > ul.portfolio_menu");
 const imagesMenu = document.querySelector('ul.portfolio_images');
 
 portfolioMenu.onclick = event => {
@@ -81,7 +91,11 @@ portfolioMenu.onclick = event => {
 
 imagesMenu.onclick = (e) => {
   if (e.target.classList.contains('portfolio_images')) return;
-  imagesMenu.querySelectorAll('li').forEach(element => element.classList.remove('portfolio_images_clicked'));
-  e.target.parentNode.classList.add('portfolio_images_clicked');
-
+  else if (e.target.parentNode.classList.contains('portfolio_images_clicked')) { 
+    e.target.parentNode.classList.remove('portfolio_images_clicked');
+  }
+  else {
+    imagesMenu.querySelectorAll('li').forEach(element => element.classList.remove('portfolio_images_clicked'));
+    e.target.parentNode.classList.add('portfolio_images_clicked');
+  }
 }

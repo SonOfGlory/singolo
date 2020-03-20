@@ -19,6 +19,7 @@ span {
 
 html, html a {
 	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
 }
 
 /*Font Face Fontello for icons*/
@@ -59,7 +60,7 @@ body {
     margin: 0px auto;
     font-family: "Lato-Regular","Lato", sans-serif;
     font-size: 18px;
-    font-weight: 400;
+	font-weight: 400;
 }
 
 a, a:link, a:active, a:visited, a:hover {
@@ -248,7 +249,7 @@ ul.menu li a.menu-active {
 
 /*============= Slider ==============*/
 
-.slider {
+#slider {
 	position: relative;
 	height: 594px;
     overflow: hidden;
@@ -257,7 +258,7 @@ ul.menu li a.menu-active {
 	transition: color 1.0s ease-in-out;
 }
 
-.slider.blue {
+#slider.blue {
 	background-color: #648bf0;
 	border-bottom: 6px solid #348bf0;
 }
@@ -473,7 +474,7 @@ ul.menu li a.menu-active {
 
 /*============= Services ==============*/
 
-.services {
+#services {
 	overflow: hidden;
     padding: 61px 0px 32px 40px;
     color: #666d89;
@@ -481,18 +482,18 @@ ul.menu li a.menu-active {
     border-bottom: 5.55px solid #ffffff; /* in PSD 5.54px */
 }
 
-.services ul {
+#services ul {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 44px 0 0 1px;
 }
 
-.services h4{
+#services h4{
 	margin: 1px 0px 10px 0px;
     letter-spacing: -0.1px;
 }
 
-.services p {
+#services p {
 	margin-left: 1px;	/* All p styles below for overflow hidden & scroll */
     max-width: 219px;
     max-height: 64.8px;
@@ -502,11 +503,11 @@ ul.menu li a.menu-active {
 	scrollbar-width: none;
 } 
 
-.services p::-webkit-scrollbar {
+#services p::-webkit-scrollbar {
 	display: none;
 }
 
-.services ul li{         /* icons */
+#services ul li{         /* icons */
 	display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -514,15 +515,15 @@ ul.menu li a.menu-active {
 	margin: 0px 20px 29.5px 0px;
 }
 
-.services ul li:nth-child(3n+3) {        
+#services ul li:nth-child(3n+3) {        
 	margin-left: 1px;
 }
 
-.services ul li:nth-child(3n+3) h4 {        
+#services ul li:nth-child(3n+3) h4 {        
 	margin-left: 2px;
 }
 
-.services ul li span {
+#services ul li span {
 	width: 55px;
     height: 55px;
     margin: 3px 20px 0px 0px;
@@ -538,11 +539,11 @@ ul.menu li a.menu-active {
 	border-radius: 50%;
 }
 
-.services ul li div {
+#services ul li div {
 	max-width: 220px;
 }
 	
-.services ul li:hover span {
+#services ul li:hover span {
 	color: #f06c64;
 	border: 2px solid #f06c64;
 	-o-transition-duration: 0.5s;
@@ -616,7 +617,7 @@ ul.menu li a.menu-active {
 
 /* ============= Portfolio ============= */
 
-.portfolio {
+#portfolio {
     padding: 61px 20px 47px 40px; /* for responcible design changed from 40px to 20px  */
 	color: #666d89;
 	background-color: #2d303a;
@@ -706,8 +707,7 @@ ul.portfolio_menu li button.portfolio-active {
 	outline: dotted 5px #F06C64 ;
 } */
 
-/* ------- candyframe ------ */
-
+/* ======= candyframe ======= */
 
 .portfolio_images_clicked {
 	width: 220px;
@@ -737,15 +737,13 @@ ul.portfolio_menu li button.portfolio-active {
 }
 
 .portfolio_images_clicked img {
-	display: block;
 	position: relative;
 	box-sizing: border-box;
-	background: white;
 }
 
 .portfolio_images_clicked,
 .portfolio_images_clicked img {
-	box-shadow: 0 0 2px deeppink,
+	box-shadow: 0 0 2px #F06C64,
 				0 0 5px rgba(0, 0, 0, 1),
 				inset 0 0 5px rgba(0, 0, 0, 1);
 	border-radius: 10px;
@@ -753,6 +751,7 @@ ul.portfolio_menu li button.portfolio-active {
 .portfolio_images_clicked img {
 	width: 210px!important;
 	height: 177px!important;
+	transition: 0.5s cubic-bezier(0, 0, 0.42, 1.55);
 }
 
 @keyframes animate {
@@ -765,16 +764,14 @@ ul.portfolio_menu li button.portfolio-active {
 	}
 }
 
-/* candyframe */
-
-
+/*========= candyframe ========*/
 
 img {
     border: none;
 }
 
 /* .portfolio_images img:hover {
-	transform: scale(1.1);
+	transform: scale(1.01);
 	-o-transition-duration: 0.5s;
 	-moz-transition-duration: 0.5s;
 	-webkit-transition-duration: 0.5s;
@@ -796,14 +793,14 @@ img {
 
 /* ============= About us ============= */
 
-.about {
+#about {
 	padding: 61.5px 40px 67px;
 	color: #666d89;
 	background-color: #f2f2f2;
 	border-bottom: 6px solid #ffffff;
 }
 
-.about h4 {
+#about h4 {
 	margin: 0.5px 0px 9.5px -1px;
 	letter-spacing: -0.1px;
 	overflow-x: scroll; /* Overflow sequence initiated */
@@ -813,29 +810,29 @@ img {
     text-overflow: ellipsis;
 } 
 
-.about h4::-webkit-scrollbar {
+#about h4::-webkit-scrollbar {
 	display: none;
 }
 
-.about p {
+#about p {
 	overflow-x: scroll; /* Overflow sequence initiated */
 	-ms-overflow-style: none;  
 	scrollbar-width: none;
 }
 
-.about p::-webkit-scrollbar {
+#about p::-webkit-scrollbar {
 	display: none;
 }
 
 
-.about ul {
+#about ul {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	padding: 44.6px 0 0 0;
 }
 
-.about ul li{
+#about ul li{
 	display: flex;
 	flex-direction: row; 
 	flex-wrap: wrap;
@@ -843,32 +840,32 @@ img {
 	align-items: center;
 }
 
-.about ul li img {
+#about ul li img {
 	margin: 0 0px 17px 0;
 }
 
-.about ul li:nth-child(2) img {
+#about ul li:nth-child(2) img {
 	margin-left: -1px;
 }
 
-.about ul li:first-child p {
+#about ul li:first-child p {
 	
 }
 
-.about ul li:first-child p {
+#about ul li:first-child p {
 	word-spacing: 0px;
     /* letter-spacing: -0.08px; */
 }
 
-.about ul li:first-child p:first-line {
+#about ul li:first-child p:first-line {
 	word-spacing: -0.5px;
 }
 
-.about ul li:first-child div {
+#about ul li:first-child div {
 	margin-left: 1px;
 }
 
-.about .icons {
+#about .icons {
 	padding-top: 23px;
 }
 
@@ -877,26 +874,26 @@ img {
 
 /* ============= Contact form ============= */
 
-.contact {
+#contact {
 	padding: 61.4px 40px 0px;
 	color: #f0d8d9;
 	background-color: #f06c64;
 	border-bottom: 6px solid #ea676b;
 }
 
-.contact h2 {
+#contact h2 {
     letter-spacing: -0.15px;
 }
 
-.contact h3 {
+#contact h3 {
 	margin-bottom: 44px;
 }
 
-.contact h4 {
+#contact h4 {
 	letter-spacing: -0.1px;
 }
 
-.contact p {
+#contact p {
 	letter-spacing: -0.03px;
     margin-bottom: 21.5px;
 }
@@ -906,7 +903,7 @@ img {
 
 }
 
-.contact form {
+#contact form {
 	/* flex-basis: 61%; */
 	max-width:620px;
 	margin: 0px 21px 0px 0px;
@@ -966,7 +963,7 @@ textarea {
 	color: #f48c8f;
   }
 
-.contact span {
+#contact span {
     display: block;
     font-size: 12px;
     font-weight: 400;
