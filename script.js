@@ -3,15 +3,11 @@
 document.addEventListener('scroll', onscroll);
 const headerMenu = document.querySelector("body > header > ul");
 
-function onscroll (e) {
+function onscroll () {
   const scrollPosition = window.scrollY;
   const allParts = document.querySelectorAll('body > header, body > main > section, body > footer'); /* body > header,  */
-  // console.log(scrollPosition);
 
   allParts.forEach(element => {
-    // console.log(element.getAttribute('id'));
-    // console.log(element);
-    // debugger;
     if ((scrollPosition + header.offsetHeight) > element.offsetTop && scrollPosition < (element.offsetTop + element.offsetHeight)) {
       headerMenu.querySelectorAll('li > a').forEach(a => {
         a.classList.remove('menu-active');
@@ -22,11 +18,6 @@ function onscroll (e) {
     }
   });
 }
-
-// ----- Old way to make menu options active: ----
-// headerMenu.onclick = event => { headerMenu.querySelectorAll('li > a').forEach(element => element.classList.remove('menu-active'));
-//     event.target.classList.add('menu-active');
-// };
 
 /* ====== Slider menu part ==== */
 
@@ -58,7 +49,20 @@ function slideBtnHandler(e) {
     }
   }, 50)
 }
- 
+
+const selected_iPhones = document.querySelectorAll(".iphone-case");
+selected_iPhones.forEach(phoneCase => phoneCase.onclick = phoneScreenHandler);
+
+function phoneScreenHandler(event) {
+  //checking few classes at once
+  const classNames = ['screen', 'button', 'square-btn-image'];
+  if (classNames.some(className => event.target.classList.contains(className))) {
+    const screen = event.target.parentNode.querySelector('.screen');
+    console.log(screen);
+    if (screen.classList.contains('screen-off')) screen.classList.remove('screen-off')
+    else screen.classList.add('screen-off')
+  }
+}
 
 /* ====== Portfolio menu part ==== */
 

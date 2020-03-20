@@ -385,7 +385,14 @@ ul.menu li a.menu-active {
 	background-image: url("assets/Images/Yellow-i-layer.png");
 	background-position: center;
 	border: solid 3px #c6c6c6;
-    border-radius: 3px;
+	border-radius: 3px;
+	transition: all 1.0s ease-in-out;
+	cursor: pointer;
+}
+
+.screen-off {
+	background-color: #000;
+	background-image: none;
 }
 
 .iphone-case .button {
@@ -431,6 +438,11 @@ ul.menu li a.menu-active {
 .horisontal .screen {
 	background-color: #82cfd9;
 	background-image: url("assets/Images/Blue-i-layer.png");
+}
+
+.horisontal .screen-off {
+	background-color: #000;
+	background-image: none;
 }
 
 .horisontal .speaker {
