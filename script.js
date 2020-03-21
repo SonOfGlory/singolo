@@ -125,6 +125,7 @@ submitForm.addEventListener('submit', function (event) {
   modalBackground.dataset.modalswitch='on';
 })
 
-modalWindow.onclick = (event) => {
-  modalBackground.dataset.modalswitch='off';
+modalBackground.onclick = (event) => {
+  console.log(event.target)
+  if ((event.target.classList.contains('modal-background')) || (event.target.classList.contains('exit-button')) || (event.target.tagName == 'BUTTON')) modalBackground.dataset.modalswitch='off';
 }
