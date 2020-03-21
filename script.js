@@ -112,20 +112,24 @@ imagesMenu.onclick = (e) => {
 
 /* == Modal == */
 
-const submitForm = document.querySelector("#contact > div > form");
-const modalWindow = document.querySelector("body > div > div.modal-window");
-const modalBackground = document.querySelector("body > div.modal-background")
+const form = document.forms[0];
+const modalWindowElements = document.querySelector("body > div > div.modal-window").querySelectorAll('h3,p');
+const modalBackground = document.querySelector("body > div.modal-background");
+const SubmitFields = form.querySelectorAll('input:not([type=submit])');
 
-submitForm.addEventListener('submit', function (event) {
+form.onsubmit = (event) => {
+  if (!form.checkValidity()) return
   event.preventDefault();
-  let SubmitFields = submitForm.querySelectorAll('input:not([type=submit])');
-  modalWindow.querySelectorAll('h3,p').forEach((element, index) => {
-    if (SubmitFields[index].value) element.value = SubmitFields[index].value;
+  modalWindowElements.forEach((element, index) => {
+    if (SubmitFields[index].value) element.innerText = SubmitFields[index].value;
   })
   modalBackground.dataset.modalswitch='on';
-})
+}
 
 modalBackground.onclick = (event) => {
   console.log(event.target)
-  if ((event.target.classList.contains('modal-background')) || (event.target.classList.contains('exit-button')) || (event.target.tagName == 'BUTTON')) modalBackground.dataset.modalswitch='off';
+  if ((event.target.classList.contains('modal-background')) || (event.target.classList.contains('exit-button')) || (event.target.tagName == 'BUTTON')) {
+    modalBackground.dataset.modalswitch='off';
+
+  };
 }
