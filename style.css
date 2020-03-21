@@ -255,12 +255,13 @@ ul.menu li a.menu-active {
     overflow: hidden;
     background: #f06c64;
 	border-bottom: 6px solid #ea676b;
-	transition: color 1.0s ease-in-out;
+	transition: all 1.0s ease-in-out;
 }
 
 #slider.blue {
 	background-color: #648bf0;
-	border-bottom: 6px solid #348bf0;
+	/* border-bottom: 6px solid #677fea; */
+	transition: all 1.0s ease-in-out;
 }
 
 .slider_button {
@@ -324,11 +325,10 @@ ul.menu li a.menu-active {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	/* transition: all 1.0s ease-in-out; */
 }
 
 .slide_one {
-	/* background: #f06c64; */
+	background: #f06c64;
 }
 
 /*========== Sliding process ==========*/
@@ -422,7 +422,8 @@ ul.menu li a.menu-active {
     height: 13px;
     background-color: #fafafa;
     border: solid 2px #bababa;
-    border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
 }
 
 /*============= Horisontal iphone ==============*/
@@ -452,9 +453,8 @@ ul.menu li a.menu-active {
 /*================== Slide Two =================*/
 
 .slide_two {
-	background-color: #648bf0;
+	/* background-color: #648bf0; */
 	z-index: 1;
-	/* border-bottom: 6px solid #348bf0; */
 }
 
 /* ======== Center phone ======== */
@@ -1025,6 +1025,85 @@ aside span:nth-child(2) {
 aside a {
 	color: #f0d8d9;
 }
+
+/* ============= Modal ============= */
+
+.modal-background {
+	position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+	background: #648bf075;
+}
+
+.modal-background[data-modalswitch=off] {
+    display: none;
+}
+.modal-background[data-modalswitch=on] {
+    display: block;
+}
+
+.modal-window {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 270px;
+    min-height: 200px;
+	padding: 25px;
+	color: oldlace;
+    background-color: #648bf0;
+	transform: translate(-50%,-50%);
+	box-shadow: 25px 25px 29px #0005;
+}
+
+.modal-window p {
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+.modal-window button {
+	padding: 10px 20px;
+    margin: 10px 100px;
+    cursor: pointer;
+}
+
+/* ---- Close button ---- */
+
+.exit-button {
+	position: absolute;
+    top: 4px;
+    right: 9px;
+    width: 1.2em;
+    height: 1.5em;
+    cursor: pointer;
+  }
+  
+  .exit-button:after, 
+  .exit-button:before, 
+  .exit-button div {
+	background-color: #fff;
+	content: '';
+	display: block;
+	height: 2px;
+	margin: 6px 0;
+	transition: all .2s ease-in-out;
+  }
+  
+  .exit-button:hover:before {
+	transform: translateY(8px) rotate(135deg);
+  }
+  
+  .exit-button:hover:after {
+	transform: translateY(-8px) rotate(-135deg);
+  }
+  
+  .exit-button:hover div {
+	transform: scale(0);
+  }
 
 /* ============= Footer ============= */
 

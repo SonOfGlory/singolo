@@ -3,7 +3,7 @@
 document.addEventListener('scroll', onscroll);
 const headerMenu = document.querySelector("body > header > ul");
 
-function onscroll () {
+onscroll = () => {
   const scrollPosition = window.scrollY;
   const allParts = document.querySelectorAll('body > header, body > main > section, body > footer'); /* body > header,  */
 
@@ -43,6 +43,10 @@ function slideBtnHandler(e) {
   setTimeout(function () {
     slide_container.classList.add('busy')
     current_slide.dataset.show = direction
+    /* add backgroung shifting */
+    if (document.querySelector('#slider').classList.contains('blue')) { document.querySelector('#slider').classList.remove('blue')}
+    else document.querySelector('#slider').classList.add('blue')
+    /* /add backgroung shifting */
     new_slide.dataset.show = 'current'
     new_slide.ontransitionend = function () {
       slide_container.classList.remove('busy')
@@ -102,4 +106,25 @@ imagesMenu.onclick = (e) => {
     imagesMenu.querySelectorAll('li').forEach(element => element.classList.remove('portfolio_images_clicked'));
     e.target.parentNode.classList.add('portfolio_images_clicked');
   }
+}
+
+/* ====== Contact menu part ==== */
+
+/* == Modal == */
+
+const submitForm = document.querySelector("#contact > div > form");
+const modalWindow = document.querySelector("body > div > div.modal-window");
+const modalBackground = document.querySelector("body > div.modal-background")
+
+submitForm.addEventListener('submit', function (event) {
+  event.preventDefault();
+  let SubmitFields = submitForm.querySelectorAll('input:not([type=submit])');
+  modalWindow.querySelectorAll('h3,p').forEach((element, index) => {
+    if (SubmitFields[index].value) element.value = SubmitFields[index].value;
+  })
+  modalBackground.dataset.modalswitch='on';
+})
+
+modalWindow.onclick = (event) => {
+  modalBackground.dataset.modalswitch='off';
 }
