@@ -74,27 +74,9 @@ const portfolioMenu = document.querySelector("body > main > section#portfolio > 
 const imagesMenu = document.querySelector('ul.portfolio_images');
 
 portfolioMenu.onclick = event => {
-
     portfolioMenu.querySelectorAll('li > button').forEach(element => element.classList.remove('portfolio-active'));
     event.target.classList.add('portfolio-active');
-
     imagesMenu.dataset.filter = event.target.id;
-
-    /* 
-    //узнаем пункт меню на который произошел клик: event.target и соответственно event.target.id
-    const images = document.querySelector('ul.portfolio_images');
-
-    //находим картинки с таким классом: let foundImages = images.filter(proper => proper.toLowerCase().includes(event.target.id.toLowerCase())) или же document.querySelectorAll(`.${event.target.id}`) 
-    let foundImages = images.querySelectorAll(`li[data-type="${event.target.id}"]`);
-    // foundImages = document.querySelectorAll('li').dataset.type
-
-    // задаем им дисплей - ноун, остальным дисплей блок foundImages.style.display = 'none';
-    if (event.target.id == 'all') [...images.children].forEach(element => element.style.display = 'list-item')
-    else {
-        [...images.children].forEach(element => element.style.display = 'none');
-        foundImages.forEach(element => element.style.display = 'list-item');
-    } 
-    */
 }
 
 imagesMenu.onclick = (e) => {
@@ -113,16 +95,15 @@ imagesMenu.onclick = (e) => {
 /* == Modal == */
 
 const form = document.forms[0];
-const modalWindowElements = document.querySelector("body > div > div.modal-window").querySelectorAll('h3,p');
+const modalWindowElements = document.querySelector("body > div > div.modal-window").querySelectorAll('p');
 const modalBackground = document.querySelector("body > div.modal-background");
-const SubmitFields = form.querySelectorAll('input:not([type=submit])');
+const SubmitFields = form.querySelectorAll('[name=Subject],[name=Detail]');
 
 form.onsubmit = (event) => {
   if (!form.checkValidity()) return
   event.preventDefault();
-  modalWindowElements.forEach((element, index) => {
-    if (SubmitFields[index].value) element.innerText = SubmitFields[index].value;
-  })
+  if (SubmitFields[0].value) modalWindowElements[0].innerText = `Тема: ${SubmitFields[0].value}`;
+  if (SubmitFields[1].value) modalWindowElements[1].innerText = `Описание: ${SubmitFields[1].value}`;
   modalBackground.dataset.modalswitch='on';
 }
 
@@ -130,6 +111,8 @@ modalBackground.onclick = (event) => {
   console.log(event.target)
   if ((event.target.classList.contains('modal-background')) || (event.target.classList.contains('exit-button')) || (event.target.tagName == 'BUTTON')) {
     modalBackground.dataset.modalswitch='off';
-
+    for (field=0; field<4; field++) form.elements[field].value = ''
+    modalWindowElements[0].innerText = 'Без темы';
+    modalWindowElements[1].innerText = 'Без описания';
   };
 }
