@@ -68,6 +68,30 @@ function phoneScreenHandler(event) {
   }
 }
 
+// const slider = document.querySelector("#slider");
+// var Height = slider.offsetHeight;
+// var Width = document.querySelector("body > main").offsetWidth;
+
+// const starterData = { 
+//   size: {
+//     width: 1020,
+//     height: 600
+//   }
+// }
+
+// window.onresize = scaleModifier();
+
+// function scaleModifier() {
+// /*   if (window.innerWidth < 1020) || (event.matches) { */
+//     let scale = Width/starterData.size.width;
+//     slider.style.transform ="translate(0%, 0%) " + "scale(" + scale + ")";
+//     slider.style.height = starterData.size.width*scale;
+//     console.log(slider.style.transform)  
+// /*   } */
+// } 
+
+// window.matchMedia('(max-width: 1020px)').addListener(scaleModifier);
+
 /* ====== Portfolio menu part ==== */
 
 const portfolioMenu = document.querySelector("body > main > section#portfolio > ul.portfolio_menu");
