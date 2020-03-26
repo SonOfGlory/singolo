@@ -176,7 +176,7 @@ header  {
 	justify-content: space-between;
 	align-items: center;
 	height: 90px;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: "Lato-Bold","Lato", sans-serif;
     line-height: 6.32px;
 	background: #2d303a;
@@ -186,9 +186,14 @@ header  {
     z-index: 2;
 }
 
+.menu-toggler { 
+	display: none;
+}
+
 .logo {
-    padding: 0px 0px 2px 40px;
-    text-transform: uppercase;
+    margin: 0px 0px 2px 40px;
+	text-transform: uppercase;
+	
 }
 
 .logo sup {
@@ -288,7 +293,7 @@ ul.menu li a.menu-active {
 	box-shadow .15s ease-in-out;
 	outline: none;
 	transition: color .15s ease-in-out;
-	z-index: 2;
+	z-index: 1;
 }
 
 .slider_button:hover {
@@ -453,7 +458,7 @@ ul.menu li a.menu-active {
 
 .slide_two {
 	/* background-color: #648bf0; */
-	z-index: 1;
+	/* z-index: 1; */
 }
 
 /* ======== Center phone ======== */
@@ -1259,8 +1264,10 @@ footer p a:before{
 	}
 	
 	.portfolio_images img {
-		width: 216.19px;
-		height: 183.76px;
+		/* width: 216.19px;
+		height: 183.76px; */
+		width: 28.15vw;
+    	height: 28.15vw;
 	}
 	
 	/* =============== About =============== */
@@ -1298,7 +1305,7 @@ footer p a:before{
 }
 
 @media (max-width: 767px) {
-	
+
 	/* ============= Portfolio ============== */
 
 	#portfolio {
@@ -1315,16 +1322,70 @@ footer p a:before{
 }
 
 @media (max-width: 620px) {
-	/* ========== Home menu burger ========== */
-	.menu-toggler {
-		position: absolute;
-		top: 4px;
-		right: 9px;
-		width: 1.2em;
-		height: 1.5em;
-		cursor: pointer;
+
+	.logo {
+		margin: 0px auto 2px auto;
+		text-transform: uppercase;
+		justify-content: space-between;
 	}
-	  
+	
+	ul.menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		position: absolute;
+		top: 0px;
+		left: -1px;
+		width: 278px;
+		height: 100vh;
+		margin: 0;
+		overflow: hidden;
+		background: #2d303a;
+		box-shadow: 13px 0px 16px #0005;
+		transition: all .5s ease-in-out;
+		z-index: 3;
+	}
+	
+	ul.menu[data-menuswitch=hide] {
+		transform: translateX(-100%);
+		transition: all .5s ease-in-out;
+	}
+
+	ul.menu li { 
+		margin: 0px 0px calc(100vh*27/812) 71px;
+	}
+
+	ul.menu li+li:before {
+		display: none;
+	}
+
+	ul.menu a {
+		display: none;
+	}
+	
+	ul.menu li a {
+		margin: 0;
+		font-family: "Lato-Bold", "Lato", sans-serif;
+		font-size: 24px;
+	}
+
+
+	/* ========== Home menu burger ========== */
+
+	
+	.menu-toggler {
+		display: block;
+		position: absolute;
+		top: 26px;
+		left: 20px;
+		width: 1.2em; /* 25 */
+		height: 1.5em; /* 20 */
+		cursor: pointer;
+		z-index: 4;
+		transition: all .5s ease-in-out;
+		transform: rotate(90deg);
+	}
+	
 	.menu-toggler:after, 
 	.menu-toggler:before, 
 	.menu-toggler div {
@@ -1333,7 +1394,12 @@ footer p a:before{
 		display: block;
 		height: 2px;
 		margin: 6px 0;
-		transition: all .2s ease-in-out;
+		transition: all .5s ease-in-out;
+	}
+
+	.menu-toggler[data-menuswitch=hide] {
+		transform: rotate(0deg);
+		transition: all .5s ease-in-out;
 	}
 }
 
