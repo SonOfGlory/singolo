@@ -191,7 +191,7 @@ header  {
 }
 
 .logo {
-    margin: 0px 0px 2px 40px;
+    padding: 0px 0px 2px 40px;
 	text-transform: uppercase;
 	
 }
@@ -1346,8 +1346,8 @@ footer p a:before{
 		z-index: 3;
 	}
 	
-	ul.menu[data-menuswitch=hide] {
-		transform: translateX(-100%);
+	ul.menu[data-menuswitch=hidden] {
+		transform: translateX(-110%);
 		transition: all .5s ease-in-out;
 	}
 
@@ -1397,7 +1397,7 @@ footer p a:before{
 		transition: all .5s ease-in-out;
 	}
 
-	.menu-toggler[data-menuswitch=hide] {
+	.menu-toggler[data-menuswitch=hidden] {
 		transform: rotate(0deg);
 		transition: all .5s ease-in-out;
 	}
