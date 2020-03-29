@@ -19,7 +19,7 @@ onscroll = () => {
   });
 }
 
-/* == Toggler low-resolution part == */
+/* === Toggler low-resolution === */
 
 const menu_toggler = document.querySelector("#header > div.menu-toggler");
 const menu_togglers_set = document.querySelectorAll('[data-menuswitch]');
@@ -35,6 +35,15 @@ menu_toggler.onclick = () => {
     }
   )
 }
+
+
+/* document.querySelector("#header > ul").addEventListener('blur', onblur); 
+onblur = () => {
+  console.log("blur")
+menu_togglers_set.forEach(toggler => {
+  toggler.dataset.menuswitch = '';
+}
+)}; */
 
 /* ====== Slider menu part ==== */
 
@@ -79,7 +88,6 @@ function phoneScreenHandler(event) {
   const classNames = ['screen', 'button', 'square-btn-image'];
   if (classNames.some(className => event.target.classList.contains(className))) {
     const screen = event.target.parentNode.querySelector('.screen');
-    console.log(screen);
     if (screen.classList.contains('screen-off')) screen.classList.remove('screen-off')
     else screen.classList.add('screen-off')
   }
@@ -112,13 +120,37 @@ function phoneScreenHandler(event) {
 /* ====== Portfolio menu part ==== */
 
 const portfolioMenu = document.querySelector("body > main > section#portfolio > ul.portfolio_menu");
-const imagesMenu = document.querySelector('ul.portfolio_images');
+let imagesMenu = document.querySelector('ul.portfolio_images');
+let imagesArray = document.querySelectorAll("#portfolio > ul.portfolio_images > li");
+
+function shuffle(array) {
+  let m = array.length, temp, i;
+  // While there remain elements to shuffle…
+  while (m) {
+    // Pick a remaining element…
+    i = Math.floor(Math.random() * m--);
+    // And swap it with the current element.
+    temp = array[m];
+    array[m] = array[i];
+    array[i] = temp;
+  }
+  return array;
+}
 
 portfolioMenu.onclick = event => {
-    portfolioMenu.querySelectorAll('li > button').forEach(element => element.classList.remove('portfolio-active'));
-    event.target.classList.add('portfolio-active');
-    imagesMenu.dataset.filter = event.target.id;
+  if (event.target.id == 'all') {
+    imagesMenu.innerHTML = '';
+    shuffle(imagesArray).forEach(li => {
+      imagesMenu.appendChild(li);
+      /* console.log(li) */
+    }) 
+  }
+  portfolioMenu.querySelectorAll('li > button').forEach(element => element.classList.remove('portfolio-active'));
+  event.target.classList.add('portfolio-active');
+  imagesMenu.dataset.filter = event.target.id;
 }
+
+// let imagesArray = document.querySelectorAll('ul.portfolio_images > li');
 
 imagesMenu.onclick = (e) => {
   if (e.target.classList.contains('portfolio_images')) return;
@@ -149,7 +181,6 @@ form.onsubmit = (event) => {
 }
 
 modalBackground.onclick = (event) => {
-  console.log(event.target)
   if ((event.target.classList.contains('modal-background')) || (event.target.classList.contains('exit-button')) || (event.target.tagName == 'BUTTON')) {
     modalBackground.dataset.modalswitch='off';
     for (field=0; field<4; field++) form.elements[field].value = ''
