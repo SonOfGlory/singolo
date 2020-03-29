@@ -673,7 +673,9 @@ ul.menu li a.menu-active {
     font-family: "Lato-Regular", sans-serif;
     font-size: 12px;
     font-weight: 300;
-    line-height: 20px;
+	line-height: 20px;
+	overflow: hidden; /* Overflow sequence initiated */
+	white-space: nowrap;
     color: #767e9e;
     border: 1px solid #666d89;
 	border-radius: 5px;
@@ -1553,5 +1555,21 @@ footer p a:before{
 	
 	#contact {
 		padding: 61.4px 30px 0px;
+	}
+}
+
+@media (max-width: 364px) {
+
+	.portfolio_menu li button {
+		height: 22px;
+		width: 17.5vw;
+		overflow-y: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	.portfolio_images li {
+		width: 37vw;
+		height: 34vw;
 	}
 }
