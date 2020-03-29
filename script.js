@@ -120,7 +120,7 @@ function phoneScreenHandler(event) {
 /* ====== Portfolio menu part ==== */
 
 const portfolioMenu = document.querySelector("body > main > section#portfolio > ul.portfolio_menu");
-let imagesMenu = document.querySelector('ul.portfolio_images');
+let images = document.querySelector('ul.portfolio_images');
 let imagesArray = Array.from(document.querySelectorAll("#portfolio > ul.portfolio_images > li"));
 
 function shuffle(array) {
@@ -135,28 +135,27 @@ function shuffle(array) {
   return array;
 }
 
-
 portfolioMenu.onclick = event => {
   if (event.target.id == 'all') {
-    imagesMenu.innerHTML = '';
+    images.innerHTML = '';
     shuffle(imagesArray).forEach(li => {
-      imagesMenu.appendChild(li);
+      images.appendChild(li);
     }) 
   }
   portfolioMenu.querySelectorAll('li > button').forEach(element => element.classList.remove('portfolio-active'));
   event.target.classList.add('portfolio-active');
-  imagesMenu.dataset.filter = event.target.id;
+  images.dataset.filter = event.target.id;
 }
 
 // let imagesArray = document.querySelectorAll('ul.portfolio_images > li');
 
-imagesMenu.onclick = (e) => {
+images.onclick = (e) => {
   if (e.target.classList.contains('portfolio_images')) return;
   else if (e.target.parentNode.classList.contains('portfolio_images_clicked')) { 
     e.target.parentNode.classList.remove('portfolio_images_clicked');
   }
   else {
-    imagesMenu.querySelectorAll('li').forEach(element => element.classList.remove('portfolio_images_clicked'));
+    images.querySelectorAll('li').forEach(element => element.classList.remove('portfolio_images_clicked'));
     e.target.parentNode.classList.add('portfolio_images_clicked');
   }
 }

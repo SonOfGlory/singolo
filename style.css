@@ -740,7 +740,7 @@ ul.portfolio_menu li button.portfolio-active {
 	outline: dotted 5px #F06C64 ;
 } */
 
-/* ======= candyframe ======= */
+/* ======= Candyframe ======= */
 
 .portfolio_images_clicked {
 	width: 220px;
@@ -772,6 +772,9 @@ ul.portfolio_menu li button.portfolio-active {
 .portfolio_images_clicked img {
 	position: relative;
 	box-sizing: border-box;
+	width: 100%;
+    height: 100%;
+	transition: 0.5s cubic-bezier(0, 0, 0.42, 1.55);
 }
 
 .portfolio_images_clicked,
@@ -780,11 +783,6 @@ ul.portfolio_menu li button.portfolio-active {
 				0 0 5px rgba(0, 0, 0, 1),
 				inset 0 0 5px rgba(0, 0, 0, 1);
 	border-radius: 10px;
-}
-.portfolio_images_clicked img {
-	width: 210px!important;
-	height: 177px!important;
-	transition: 0.5s cubic-bezier(0, 0, 0.42, 1.55);
 }
 
 @keyframes animate {
@@ -1271,13 +1269,13 @@ footer p a:before{
 
 	.portfolio_images li {
 		margin-right: 19.65px;
-	}
-	
-	.portfolio_images img {
-		/* width: 216.19px;
-		height: 183.76px; */
 		width: calc(100vw*216.19/768);
 		height: calc(100vw*183.76/768);
+	}
+
+	.portfolio_images img {
+		width: 100%;
+		height: 100%;
 	}
 	
 	/* ============== About ============== */
@@ -1328,7 +1326,7 @@ footer p a:before{
 	/* ============= Portfolio ============= */
 
 	.portfolio_images {
-		justify-content: space-between;
+		/* justify-content: space-between; */
 	}
 
 	.portfolio_images li {
@@ -1336,6 +1334,22 @@ footer p a:before{
     	margin-bottom: 14px;
 	}
 
+}
+
+@media (max-width: 627px) {
+
+/* ============= Portfolio ============== */
+
+.portfolio_images li {
+    width: calc(100vw*151/375);
+	height: calc(100vw*128/375);
+}
+
+}
+
+.portfolio_images {
+
+	justify-content:normal; /* normal */
 }
 
 @media (max-width: 620px) {
@@ -1428,10 +1442,13 @@ footer p a:before{
 	.menu-toggler {
 		display: block;
 		position: absolute;
-		top: 26px;
-		left: 20px;
-		width: 1.2em; /* 25 */
-		height: 1.5em; /* 20 */
+		top: 22.5px;
+		left: 18px;
+		width: 25px;
+		height: 20px;
+		padding: 4px 7px 13px 6px;
+		background: #2d303a;
+		border-radius: 50%;
 		cursor: pointer;
 		transition: all .5s ease-in-out;
 		transform: rotate(90deg);
@@ -1452,12 +1469,6 @@ footer p a:before{
 	.menu-toggler[data-menuswitch='hidden'] {
 		transform: rotate(0deg);
 		transition: all .5s ease-in-out;
-	}
-
-	/* ============= Portfolio ============== */
-
-	.portfolio_images {
-		justify-content: normal;
 	}
 
 	/* ================ About ================ */
@@ -1515,11 +1526,6 @@ footer p a:before{
 
 	#portfolio {
 		padding: 65px 17px 47px 30px;
-	}
-
-	.portfolio_images img {
-		width: 151px;
-		height: 128px;
 	}
 
 	/* ================ About ================ */
