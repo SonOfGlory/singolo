@@ -91,6 +91,7 @@ h2 {
 }
 
 h3 {
+	margin-right: 20px;
     max-width: 940px;
     font-family: "Lato-Light", "Lato", sans-serif;
     font-size: 18px;
@@ -209,6 +210,10 @@ ul.menu {
 	margin: 10px 39px 0px 0px;
 }
 
+ul.menu .logo{
+	display: none;
+}
+
 ul.menu li {
 	font-size: 12px;
 	text-transform: uppercase;
@@ -251,6 +256,12 @@ ul.menu li a.menu-active {
 	-moz-transition-duration: 0.5s;
 	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
+}
+
+.menu-background[data-menuswitch='hidden'],
+.menu-background[data-menuswitch] {
+	display: none;
+	transition: all .5s ease-in-out;
 }
 
 /*============= Slider ==============*/
@@ -704,7 +715,6 @@ ul.portfolio_menu li button.portfolio-active {
 .portfolio_images {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-evenly;
 	margin: 0 auto;
     max-width: 960px; /* for responcible changed from 940px */
 }
@@ -850,9 +860,9 @@ img {
 
 #about ul {
 	display: flex;
-	flex-wrap: wrap;
 	justify-content: flex-start;
 	padding: 44.6px 0 0 0;
+	/* max-width: 960px; */ /* added */
 }
 
 #about ul li{
@@ -861,12 +871,11 @@ img {
 	flex-wrap: wrap;
 	max-width: 300px;
 	margin: 0px 20px 0px 0px;
-	align-items: center;
 }
 
 
 #about ul li img {
-	margin: 0 0px 17px 0;
+    margin: 0 0px 17px 0;
 }
 
 #about ul li:nth-child(2) img {
@@ -879,7 +888,6 @@ img {
 
 #about ul li:first-child p {
 	word-spacing: 0px;
-    /* letter-spacing: -0.08px; */
 }
 
 #about ul li:first-child p:first-line {
@@ -911,6 +919,7 @@ img {
 }
 
 #contact h3 {
+	margin-right: 0px;
 	margin-bottom: 44px;
 }
 
@@ -1155,18 +1164,18 @@ footer p a:before{
 
 @media (max-width: 1019px) {
 
-	h3 {
-		margin-right: 20px;
-	}
-	
 	/* ============= Slider ============= */
 
 	.slider_button#next {
-		top: calc(100vw*264/1020);
+		top: 50%;
+		right: 3.922%;
+		transform: translateY(-50%);
 	}
 
 	.slider_button#prev {
-		top: calc(100vw*264/1020);
+		top: 50%;
+		left: 3.922%;
+		transform: translateY(-50%);
 	}
 
 	#slider {
@@ -1227,7 +1236,6 @@ footer p a:before{
 		  box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset;
 	}
 	
-	
 	.square-btn-image {
 		top: calc(100vw*420/1020);
 		left: calc(100vw*99/1020);
@@ -1248,15 +1256,15 @@ footer p a:before{
 	}
 
 	
-	/* ============= Services ============= */
+	/* ============ Services ============= */
 	
 	#services ul li{         /* icons */
 		margin: 0px auto 29.5px 0px;
 		padding-right: 10px;
 	}
 	
-	/* ============= Portfolio ============= */
-	
+	/* ============ Portfolio ============ */
+
 	#portfolio {
 		padding: 65px 19.15px 47px 39.4px;
 	}
@@ -1268,22 +1276,27 @@ footer p a:before{
 	.portfolio_images img {
 		/* width: 216.19px;
 		height: 183.76px; */
-		width: 28.15vw;
-    	height: 28.15vw;
+		width: calc(100vw*216.19/768);
+		height: calc(100vw*183.76/768);
 	}
 	
-	/* =============== About =============== */
+	/* ============== About ============== */
 	
 	#about {
 		padding: 65px 19.15px 47px 40px;
 	}
+
+	#about ul li {
+		margin: 0px 1.9vw 0px 0px;
+		width: calc(100vw*219/768);
+	}
 	
 	#about img {
-		width: 218.94px;
-		height: 218.94px;
+		width: calc(100vw*218.94/768);
+		height: calc(100vw*218.94/768);
 	}
 
-	/* =============== Contact ============== */
+	/* ============= Contact ============== */
 	
 	input {
 		margin: 0 0 16px 0;
@@ -1308,27 +1321,38 @@ footer p a:before{
 
 @media (max-width: 767px) {
 
-	/* ============= Portfolio ============== */
-
-	#portfolio {
-		padding: 65px 17px 47px 30px;
+	.slider_button#next {
+		right: 3.406%;
 	}
-	
+
+	/* ============= Portfolio ============= */
+
+	.portfolio_images {
+		justify-content: space-between;
+	}
+
 	.portfolio_images li {
 		margin-right: 13px;
+    	margin-bottom: 14px;
 	}
-	
-	#about {
-		padding: 65px 30px 47px 30px;
-	}
+
 }
 
 @media (max-width: 620px) {
 
-	.logo {
+	/* ============== Header =============== */
+
+	header .logo {
 		margin: 0px auto 2px auto;
 		text-transform: uppercase;
 		justify-content: space-between;
+	}
+
+	ul.menu li.logo {
+		display: block;
+		position: absolute;
+		top: 36px;
+		left: -40px;
 	}
 	
 	ul.menu {
@@ -1339,7 +1363,7 @@ footer p a:before{
 		top: 0px;
 		left: -1px;
 		width: 278px;
-		height: 100vh;
+		height: calc(100vh + 1px);
 		margin: 0;
 		overflow: hidden;
 		background: #2d303a;
@@ -1347,11 +1371,12 @@ footer p a:before{
 		transition: all .5s ease-in-out;
 		z-index: 3;
 	}
-	
-	ul.menu[data-menuswitch=hidden] {
+
+	ul.menu[data-menuswitch='hidden'] {
 		transform: translateX(-110%);
 		transition: all .5s ease-in-out;
 	}
+	
 
 	ul.menu li { 
 		margin: 0px 0px calc(100vh*27/812) 71px;
@@ -1371,9 +1396,34 @@ footer p a:before{
 		font-size: 24px;
 	}
 
+	
+	.menu-background[data-menuswitch] {
+		display: block;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: #0006;
+		transition: all .5s ease-in-out;
+	}
+	
+	.menu-background[data-menuswitch='hidden'] {
+		display: none;
+		transition: all .5s ease-in-out;
+	}
+
+	main:not([data-menuswitch='hidden']), footer:not([data-menuswitch='hidden']) {
+		filter: blur(0.5rem);
+		transition: all .5s ease-in-out;
+	}
+
+	main, footer {
+		transition: all .5s ease-in-out;
+	}
+
 
 	/* ========== Home menu burger ========== */
-
 	
 	.menu-toggler {
 		display: block;
@@ -1383,9 +1433,9 @@ footer p a:before{
 		width: 1.2em; /* 25 */
 		height: 1.5em; /* 20 */
 		cursor: pointer;
-		z-index: 4;
 		transition: all .5s ease-in-out;
 		transform: rotate(90deg);
+		z-index: 4;
 	}
 	
 	.menu-toggler:after, 
@@ -1399,15 +1449,46 @@ footer p a:before{
 		transition: all .5s ease-in-out;
 	}
 
-	.menu-toggler[data-menuswitch=hidden] {
+	.menu-toggler[data-menuswitch='hidden'] {
 		transform: rotate(0deg);
 		transition: all .5s ease-in-out;
+	}
+
+	/* ============= Portfolio ============== */
+
+	.portfolio_images {
+		justify-content: normal;
+	}
+
+	/* ================ About ================ */
+
+	#about ul {
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+
+	#about ul li {
+		width: 100%;
+		margin: 34px 1.9vw 0px 0px;
+	}
+
+	#about img {
+		width: 100%;
+		height: 100%;
 	}
 
 	/* =============== Contact ============== */
 
 	.form_container {
 		flex-direction: column;
+	}
+
+	#contact {
+		padding: 61.4px 40px 0px;
+	}
+
+	#contact form {
+		margin-right: 30px;
 	}
 
 	form input, form textarea {
@@ -1417,8 +1498,47 @@ footer p a:before{
 }
 
 @media (max-width: 520px) {
+	
+	h3 {
+		text-align: left;
+		margin-right: 19px;
+	}
+
+	/* ============= Services ================ */
+
+	#services {
+		overflow: hidden;
+		padding: 61px 10px 32px 30px;
+	}
+
+	/* ============= Portfolio =============== */
+
+	#portfolio {
+		padding: 65px 17px 47px 30px;
+	}
+
 	.portfolio_images img {
 		width: 151px;
 		height: 128px;
+	}
+
+	/* ================ About ================ */
+
+	#about {
+		padding: 65px 10px 47px 30px;
+	}
+
+	#about ul li {
+		padding: 0px 19px 0px 0px;
+	}
+
+	#about img {
+		transform: scale(1.05) translate(2%);
+	}
+
+	/* ================ Contact =============== */
+	
+	#contact {
+		padding: 61.4px 30px 0px;
 	}
 }
