@@ -121,28 +121,26 @@ function phoneScreenHandler(event) {
 
 const portfolioMenu = document.querySelector("body > main > section#portfolio > ul.portfolio_menu");
 let imagesMenu = document.querySelector('ul.portfolio_images');
-let imagesArray = document.querySelectorAll("#portfolio > ul.portfolio_images > li");
+let imagesArray = Array.from(document.querySelectorAll("#portfolio > ul.portfolio_images > li"));
 
 function shuffle(array) {
-  let m = array.length, temp, i;
+  let m = array.length, i;
   // While there remain elements to shuffle…
   while (m) {
     // Pick a remaining element…
     i = Math.floor(Math.random() * m--);
     // And swap it with the current element.
-    temp = array[m];
-    array[m] = array[i];
-    array[i] = temp;
+    [array[m], array[i]] = [array[i], array[m]];
   }
   return array;
 }
+
 
 portfolioMenu.onclick = event => {
   if (event.target.id == 'all') {
     imagesMenu.innerHTML = '';
     shuffle(imagesArray).forEach(li => {
       imagesMenu.appendChild(li);
-      /* console.log(li) */
     }) 
   }
   portfolioMenu.querySelectorAll('li > button').forEach(element => element.classList.remove('portfolio-active'));
