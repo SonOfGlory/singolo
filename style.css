@@ -1340,17 +1340,24 @@ footer p a:before{
 
 /* ============= Portfolio ============== */
 
-.portfolio_images li {
-    width: calc(100vw*151/375);
-	height: calc(100vw*128/375);
-}
+	.portfolio_images {
+		justify-content:normal; /* normal */
+	}
+
+	.portfolio_images li {
+		width: calc(100vw*151/375);
+		height: calc(100vw*128/375);
+	}
+
+
+	.portfolio_images li:nth-child(n+9) {
+		display: none; 
+	}
 
 }
 
-.portfolio_images {
 
-	justify-content:normal; /* normal */
-}
+
 
 @media (max-width: 620px) {
 
