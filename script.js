@@ -1,3 +1,9 @@
+window.addEventListener('resize', function() { document.querySelector("body").classList.add('busy');}, true);
+
+if (window.resize == false) {
+  document.querySelector("body").classList.remove('busy');
+}
+
 /* ======= Header menu part ===== */
 
 document.addEventListener('scroll', onscroll);
@@ -35,7 +41,6 @@ menu_toggler.onclick = () => {
     }
   )
 }
-
 
 /* document.querySelector("#header > ul").addEventListener('blur', onblur); 
 onblur = () => {
